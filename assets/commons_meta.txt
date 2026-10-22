@@ -1,0 +1,14 @@
+slug|file|thumb|license|artist|page
+a_hoechlin|File:Tyler Hoechlin by Gage Skidmore.jpg|https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Tyler_Hoechlin_by_Gage_Skidmore.jpg/960px-Tyler_Hoechlin_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail|CC BY-SA 3.0|Gage Skidmore|https://commons.wikimedia.org/wiki/File:Tyler_Hoechlin_by_Gage_Skidmore.jpg
+a_tulloch|File:Elizabeth Tulloch by Gage Skidmore 2.jpg|
+a_cavanagh|File:Tom Cavanagh by Gage Skidmore.jpg|
+a_cudlitz|File:Michael Cudlitz July 2017.jpg|
+a_chriqui|File:Emmanuelle Chriqui (2014).jpg|
+a_garfin|File:Alex Garfin In November 2024.jpg|
+a_kirby|File:Will Eisner, Jack Kirby, Rosalind Kirby 1982.jpg|
+a_chriqui|File:Emmanuelle Chriqui (2014).jpg|https://upload.wikimedia.org/wikipedia/commons/8/8a/Emmanuelle_Chriqui_%282014%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled|CC BY-SA 3.0|Georges Biard|https://commons.wikimedia.org/wiki/File:Emmanuelle_Chriqui_(2014).jpg
+a_garfin|File:Alex Garfin In November 2024.jpg|https://upload.wikimedia.org/wikipedia/commons/a/a9/Alex_Garfin_In_November_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled|CC BY 4.0|Anotherwikiaccountagain|https://commons.wikimedia.org/wiki/File:Alex_Garfin_In_November_2024.jpg
+a_kirby|File:Will Eisner, Jack Kirby, Rosalind Kirby 1982.jpg|https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Will_Eisner%2C_Jack_Kirby%2C_Rosalind_Kirby_1982.jpg/960px-Will_Eisner%2C_Jack_Kirby%2C_Rosalind_Kirby_1982.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail|CC BY 2.0|Alan Light|https://commons.wikimedia.org/wiki/File:Will_Eisner,_Jack_Kirby,_Rosalind_Kirby_1982.jpg
+a_tulloch|File:Elizabeth Tulloch by Gage Skidmore 2.jpg|https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Elizabeth_Tulloch_by_Gage_Skidmore_2.jpg/960px-Elizabeth_Tulloch_by_Gage_Skidmore_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail|CC BY-SA 3.0|Gage Skidmore|https://commons.wikimedia.org/wiki/File:Elizabeth_Tulloch_by_Gage_Skidmore_2.jpg
+a_cavanagh|File:Tom Cavanagh by Gage Skidmore.jpg|https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Tom_Cavanagh_by_Gage_Skidmore.jpg/960px-Tom_Cavanagh_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail|CC BY-SA 3.0|Gage Skidmore|https://commons.wikimedia.org/wiki/File:Tom_Cavanagh_by_Gage_Skidmore.jpg
+a_cudlitz|File:Michael Cudlitz July 2017.jpg|https://upload.wikimedia.org/wikipedia/commons/6/6f/Michael_Cudlitz_July_2017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled|CC BY 2.0|Florida Supercon|https://commons.wikimedia.org/wiki/File:Michael_Cudlitz_July_2017.jpg

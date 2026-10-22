@@ -1,0 +1,997 @@
+<title>Superman &amp; Lois: Staffel 5–9</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Superman &amp; Lois geht weiter: Staffel 5 bis 9 als Fan-Fortsetzung mit Episodenguide, Schurken-Lexikon, Liebesgeschichten, Darstellern und über 300 berechneten Kämpfen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<style>
+/* Layout: Kino-Microsite einer Streaming-Serie. Nacht über Kansas, Kristall-Blau aus der Festung, Cape-Rot als Akzent.
+   Glas-Navigation oben, große Bildflächen, 3D-Karten, Seitenspalte mit eigenem Scrollbereich. */
+:root {
+  --bg: #05070d;
+  --bg-2: #0a0f1c;
+  --bg-3: #111829;
+  --glass: rgba(14, 20, 36, .72);
+  --panel: rgba(255, 255, 255, .045);
+  --panel-2: rgba(255, 255, 255, .08);
+  --line: rgba(255, 255, 255, .11);
+  --ink: #f2f4f9;
+  --ink-2: #bcc4d3;
+  --ink-3: #8d97ab;
+  --red: #e63b3f;
+  --red-2: #ff6b6f;
+  --blue: #3a7bff;
+  --sky: #82c8ff;
+  --gold: #ffc950;
+  --love: #ff7aa2;
+  --kanon: #82c8ff;
+  --plan: #ffc950;
+  --fan: #ff8a8d;
+  --f-disp: "Archivo", "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  --f-text: "Hanken Grotesk", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --wrap: 1240px;
+  --nav-h: 64px;
+  --r: 14px;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 16px); }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--f-text); font-size: 1.0625rem; line-height: 1.62; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 60; background: var(--bg); }
+a { color: var(--sky); text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
+h1, h2, h3, h4 { font-family: var(--f-disp); margin: 0; line-height: 1.04; letter-spacing: -.015em; text-wrap: balance; font-weight: 800; font-stretch: 112%; font-variation-settings: "wdth" 112; }
+h1 { font-size: clamp(2.4rem, 7vw, 5.2rem); font-weight: 900; font-variation-settings: "wdth" 125; font-stretch: 125%; letter-spacing: -.03em; }
+h2 { font-size: clamp(1.7rem, 4vw, 2.7rem); }
+h3 { font-size: clamp(1.15rem, 2.2vw, 1.4rem); }
+h4 { font-size: 1.02rem; }
+p { margin: 0; }
+ul, ol { margin: 0; }
+button { font: inherit; color: inherit; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.kicker { font: 700 .82rem var(--f-text); letter-spacing: .14em; text-transform: uppercase; color: var(--red-2); }
+.lead { font-size: clamp(1.08rem, 1.6vw, 1.25rem); color: var(--ink-2); line-height: 1.55; max-width: 62ch; }
+.muted { color: var(--ink-2); }
+.dim { color: var(--ink-3); }
+.small { font-size: .92rem; }
+.stack { display: grid; gap: 1rem; }
+.prose { max-width: 66ch; }
+.term { all: unset; cursor: help; color: var(--sky); border-bottom: 1.5px dotted rgba(130, 200, 255, .7); font-weight: 600; }
+.term:hover { color: #fff; border-bottom-color: #fff; }
+.term:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.chip { display: inline-flex; align-items: center; gap: .35rem; font: 600 .78rem var(--f-text); letter-spacing: .02em; padding: .28rem .65rem; border-radius: 99px; background: var(--panel-2); border: 1px solid var(--line); color: var(--ink-2); white-space: nowrap; }
+.chip.kanon { color: var(--kanon); border-color: rgba(130, 200, 255, .35); }
+.chip.fan { color: var(--fan); border-color: rgba(255, 138, 141, .35); }
+.chip.plan { color: var(--plan); border-color: rgba(255, 201, 80, .35); }
+.chips { display: flex; flex-wrap: wrap; gap: .45rem; }
+.btn { display: inline-flex; align-items: center; gap: .5rem; min-height: 48px; padding: .7rem 1.25rem; border-radius: 99px; border: 1px solid var(--line); background: var(--panel-2); color: var(--ink); text-decoration: none; font: 700 .98rem var(--f-text); cursor: pointer; transition: background .2s, transform .2s, border-color .2s; touch-action: manipulation; }
+.btn:hover { background: rgba(255, 255, 255, .14); transform: translateY(-1px); }
+.btn.red { background: var(--red); border-color: var(--red); color: #fff; box-shadow: 0 10px 30px -10px rgba(230, 59, 63, .8); }
+.btn.red:hover { background: #ff4a4e; }
+.btn svg { width: 18px; height: 18px; }
+.btns { display: flex; flex-wrap: wrap; gap: .7rem; }
+.sec { padding-block: clamp(2.5rem, 6vw, 4.5rem); display: grid; gap: 1.6rem; }
+.sec-head { display: grid; gap: .6rem; }
+img { display: block; max-width: 100%; }
+.cover { width: 100%; height: 100%; object-fit: cover; }
+
+/* Navigation */
+.nav { position: fixed; top: env(safe-area-inset-top, 0px); left: 0; right: 0; z-index: 50; background: var(--glass); backdrop-filter: blur(18px) saturate(1.4); -webkit-backdrop-filter: blur(18px) saturate(1.4); border-bottom: 1px solid var(--line); }
+.nav-in { height: var(--nav-h); display: flex; align-items: center; gap: 1rem; }
+.brand { display: flex; align-items: baseline; gap: .55rem; text-decoration: none; color: var(--ink); flex: none; }
+.brand b { font: 900 1.15rem var(--f-disp); font-variation-settings: "wdth" 120; letter-spacing: -.02em; }
+.brand b i { font-style: normal; color: var(--red); }
+.brand span { font: 600 .72rem var(--f-text); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); }
+.links { display: flex; align-items: center; gap: .15rem; margin-left: auto; }
+.links a, .links > button { display: inline-flex; align-items: center; gap: .3rem; min-height: 44px; padding: 0 .75rem; border-radius: 99px; color: var(--ink-2); text-decoration: none; font: 600 .9rem var(--f-text); background: none; border: 0; cursor: pointer; white-space: nowrap; }
+.links a:hover, .links > button:hover { color: #fff; background: var(--panel-2); }
+.links a[aria-current="page"], .links > button.on { color: #fff; background: rgba(230, 59, 63, .22); }
+.links svg { width: 14px; height: 14px; }
+.mega { position: absolute; left: 0; right: 0; top: var(--nav-h); background: rgba(8, 12, 24, .96); backdrop-filter: blur(20px); border-bottom: 1px solid var(--line); padding-block: 1.2rem 1.4rem; }
+.mega-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: .9rem; }
+.mega a { position: relative; display: block; border-radius: 12px; overflow: hidden; aspect-ratio: 16 / 10; text-decoration: none; color: #fff; border: 1px solid var(--line); }
+.mega a img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+.mega a:hover img { transform: scale(1.06); }
+.mega a::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(5, 7, 13, .92) 15%, rgba(5, 7, 13, 0) 70%); }
+.mega a span { position: absolute; left: .8rem; right: .8rem; bottom: .65rem; z-index: 1; display: grid; }
+.mega a span b { font: 800 1.05rem var(--f-disp); font-variation-settings: "wdth" 115; }
+.mega a span i { font-style: normal; font-size: .8rem; color: var(--ink-2); }
+.menu-btn { display: none; margin-left: auto; min-height: 44px; min-width: 44px; border-radius: 99px; border: 1px solid var(--line); background: var(--panel-2); cursor: pointer; align-items: center; justify-content: center; gap: .4rem; padding: 0 .9rem; font-weight: 700; }
+.menu-btn svg { width: 20px; height: 20px; }
+.sheet { position: fixed; inset: 0; z-index: 70; background: var(--bg); padding: calc(env(safe-area-inset-top, 0px) + 1rem) max(16px, env(safe-area-inset-right, 0px)) calc(env(safe-area-inset-bottom, 0px) + 1.5rem) max(16px, env(safe-area-inset-left, 0px)); overflow-y: auto; display: grid; align-content: start; gap: 1.2rem; }
+.sheet-top { display: flex; justify-content: space-between; align-items: center; }
+.sheet-links { display: grid; gap: .3rem; }
+.sheet-links a { display: flex; align-items: center; min-height: 52px; padding: 0 1rem; border-radius: 12px; background: var(--panel); color: var(--ink); text-decoration: none; font: 800 1.15rem var(--f-disp); font-variation-settings: "wdth" 112; }
+.sheet-links a[aria-current="page"] { background: rgba(230, 59, 63, .25); }
+.sheet-seasons { display: grid; grid-template-columns: repeat(5, 1fr); gap: .4rem; }
+.sheet-seasons a { display: grid; place-items: center; min-height: 56px; border-radius: 12px; background: var(--panel-2); color: #fff; text-decoration: none; font: 900 1.3rem var(--f-disp); }
+.sheet-seasons a[aria-current="page"] { background: var(--red); }
+@media (max-width: 1080px) { .links { display: none; } .menu-btn { display: inline-flex; } }
+@media (max-width: 420px) { .brand span { display: none; } .stats-row { gap: .5rem 1.1rem; } .stats-row b { font-size: 1.6rem; } }
+
+main { padding-top: calc(var(--nav-h) + env(safe-area-inset-top, 0px)); min-height: 60vh; }
+
+/* Start: 3D-Hero */
+.hero { position: relative; overflow: hidden; isolation: isolate; border-bottom: 1px solid var(--line); }
+.hero-bg { position: absolute; inset: 0; z-index: -3; }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: .38; filter: saturate(1.1); }
+.hero::before { content: ""; position: absolute; inset: 0; z-index: -2; background: radial-gradient(ellipse at 75% 40%, rgba(58, 123, 255, .28), transparent 55%), linear-gradient(90deg, rgba(5, 7, 13, .97) 0%, rgba(5, 7, 13, .78) 45%, rgba(5, 7, 13, .2) 100%), linear-gradient(0deg, var(--bg) 0%, rgba(5, 7, 13, 0) 40%); }
+#stage { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; }
+@media (max-width: 1099px) { #stage { opacity: .45; } }
+.hero-in { display: grid; gap: 1.4rem; padding-block: clamp(3.5rem, 10vw, 7.5rem) clamp(3rem, 8vw, 6rem); max-width: 760px; }
+.hero h1 span { display: block; color: var(--red); font-size: .5em; letter-spacing: -.01em; margin-top: .25rem; }
+.stats-row { display: flex; flex-wrap: wrap; gap: .5rem 1.6rem; margin-top: .4rem; }
+.stats-row div { display: grid; }
+.stats-row b { font: 900 1.9rem var(--f-disp); font-variation-settings: "wdth" 120; font-variant-numeric: tabular-nums; }
+.stats-row span { font-size: .82rem; color: var(--ink-3); text-transform: uppercase; letter-spacing: .1em; font-weight: 600; }
+
+/* Staffel-Karussell mit 3D-Kippen */
+.rail { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(270px, 1fr); gap: 1.1rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: .6rem .2rem 1.4rem; scrollbar-width: thin; scrollbar-color: rgba(255,255,255,.2) transparent; }
+@media (min-width: 1100px) { .rail { grid-auto-flow: row; grid-template-columns: repeat(5, 1fr); overflow: visible; } }
+.tilt { perspective: 900px; }
+.scard { position: relative; display: block; aspect-ratio: 3 / 4.2; border-radius: 18px; overflow: hidden; color: #fff; text-decoration: none; scroll-snap-align: start; transform-style: preserve-3d; transition: transform .25s ease, box-shadow .25s; border: 1px solid var(--line); background: var(--bg-3); box-shadow: 0 20px 50px -25px rgba(0, 0, 0, .9); }
+.scard .l1 { position: absolute; inset: -6%; }
+.scard .l1 img { width: 100%; height: 100%; object-fit: cover; opacity: .55; }
+.scard .l2 { position: absolute; right: -8%; bottom: 18%; width: 78%; height: 66%; transform: translateZ(40px); }
+.scard .l2 img { width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 12px; box-shadow: 0 25px 50px -15px rgba(0, 0, 0, .9); }
+.scard::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(5, 7, 13, .97) 22%, rgba(5, 7, 13, .1) 65%); pointer-events: none; }
+.scard .txt { position: absolute; left: 1.1rem; right: 1.1rem; bottom: 1rem; z-index: 2; display: grid; gap: .3rem; transform: translateZ(60px); }
+.scard .num { font: 900 3.4rem/0.9 var(--f-disp); font-variation-settings: "wdth" 125; color: var(--red); }
+.scard h3 { font-size: 1.45rem; }
+.scard .villain { font-size: .86rem; color: var(--ink-2); }
+.scard:hover { box-shadow: 0 30px 70px -20px rgba(58, 123, 255, .45); }
+
+/* Kacheln allgemein */
+.grid { display: grid; gap: 1rem; }
+.g2 { grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); }
+.g3 { grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+.g4 { grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); }
+.quad { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+@media (min-width: 560px) { .quad { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .quad { grid-template-columns: repeat(4, 1fr); } }
+.tile { position: relative; border-radius: var(--r); overflow: hidden; border: 1px solid var(--line); background: var(--bg-2); display: grid; min-width: 0; }
+.tile .img { aspect-ratio: 16 / 9; overflow: hidden; }
+.tile .img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+.tile:hover .img img { transform: scale(1.04); }
+.tile .body { padding: 1rem 1.1rem 1.15rem; display: grid; gap: .45rem; align-content: start; }
+.hero-card { all: unset; box-sizing: border-box; width: 100%; cursor: pointer; position: relative; border-radius: 18px; overflow: hidden; aspect-ratio: 3 / 4; border: 1px solid var(--line); transform-style: preserve-3d; transition: transform .25s, box-shadow .25s; display: block; }
+.hero-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.hero-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(5, 7, 13, .95) 12%, rgba(5, 7, 13, 0) 55%); }
+.hero-card span { position: absolute; left: 1rem; right: 1rem; bottom: .9rem; z-index: 1; display: grid; gap: .15rem; transform: translateZ(40px); }
+.hero-card b { font: 800 1.3rem var(--f-disp); font-variation-settings: "wdth" 115; }
+.hero-card i { font-style: normal; font-size: .86rem; color: var(--ink-2); }
+.hero-card:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.hero-card:hover { box-shadow: 0 28px 60px -22px rgba(255, 201, 80, .4); }
+
+/* Staffelseite */
+.s-hero { position: relative; overflow: hidden; isolation: isolate; border-bottom: 1px solid var(--line); }
+.s-hero .bg { position: absolute; inset: 0; z-index: -2; }
+.s-hero .bg img { width: 100%; height: 100%; object-fit: cover; opacity: .5; }
+.s-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(5, 7, 13, .97) 0%, rgba(5, 7, 13, .7) 50%, rgba(5, 7, 13, .35) 100%), linear-gradient(0deg, var(--bg) 0%, rgba(5, 7, 13, 0) 45%); }
+.s-hero-in { display: grid; gap: 2rem; padding-block: clamp(2.5rem, 7vw, 5rem) clamp(2rem, 5vw, 3.5rem); align-items: center; }
+@media (min-width: 900px) { .s-hero-in { grid-template-columns: 1.25fr .75fr; } }
+.s-num { font: 900 clamp(4.5rem, 14vw, 9rem)/.8 var(--f-disp); font-variation-settings: "wdth" 125; color: transparent; -webkit-text-stroke: 2px rgba(255, 255, 255, .55); }
+.s-meta { display: flex; flex-wrap: wrap; gap: .5rem; }
+.s-meta .chip { white-space: normal; }
+.s-hero-in > * { min-width: 0; }
+.villain-frame { perspective: 1000px; justify-self: center; width: min(360px, 80vw); }
+.villain-frame button { all: unset; box-sizing: border-box; width: 100%; cursor: pointer; display: block; position: relative; aspect-ratio: 3 / 4; border-radius: 18px; overflow: hidden; border: 1px solid rgba(255, 255, 255, .2); box-shadow: 0 40px 80px -30px rgba(230, 59, 63, .55); transform-style: preserve-3d; transition: transform .25s; }
+.villain-frame button img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.villain-frame button span { position: absolute; left: 0; right: 0; bottom: 0; padding: 2.5rem 1rem .9rem; background: linear-gradient(0deg, rgba(5, 7, 13, .95), transparent); display: grid; gap: .1rem; transform: translateZ(30px); }
+.villain-frame button b { font: 800 1.25rem var(--f-disp); font-variation-settings: "wdth" 115; }
+.villain-frame button i { font-style: normal; font-size: .85rem; color: var(--gold); font-weight: 700; }
+.villain-frame button:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+
+.layout { display: grid; gap: 2.5rem; padding-block: 2.5rem 3rem; }
+@media (min-width: 1000px) {
+  .layout { grid-template-columns: minmax(0, 1fr) 320px; gap: 3rem; align-items: start; }
+  .layout > aside { position: sticky; top: calc(var(--nav-h) + 16px); max-height: calc(100vh - var(--nav-h) - 32px); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: rgba(255, 255, 255, .25) transparent; padding-right: .3rem; }
+}
+.layout > div, .layout > aside { display: grid; gap: 2.2rem; min-width: 0; align-content: start; }
+.layout > aside { gap: 1rem; }
+.box { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); padding: 1.1rem 1.15rem; display: grid; gap: .75rem; }
+.box h3 { font-size: 1.05rem; }
+.box.glow { border-color: rgba(230, 59, 63, .4); background: linear-gradient(160deg, rgba(230, 59, 63, .12), var(--panel)); }
+dl.facts { margin: 0; display: grid; gap: .55rem; font-size: .95rem; }
+dl.facts dt { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); font-weight: 700; }
+dl.facts dd { margin: 0; }
+.ep-index { list-style: none; padding: 0; display: grid; gap: .15rem; }
+.ep-index a { display: grid; grid-template-columns: 3.2rem 1fr; gap: .5rem; padding: .45rem .55rem; border-radius: 10px; text-decoration: none; color: var(--ink-2); font-size: .93rem; }
+.ep-index a:hover { background: var(--panel-2); color: #fff; }
+.ep-index b { color: var(--red-2); font-variant-numeric: tabular-nums; font-weight: 700; }
+
+.villain-card { display: grid; gap: 1.2rem; background: linear-gradient(135deg, rgba(230, 59, 63, .14), rgba(58, 123, 255, .06)); border: 1px solid var(--line); border-radius: 18px; padding: 1.2rem; }
+@media (min-width: 640px) { .villain-card { grid-template-columns: 170px 1fr; align-items: start; } }
+.villain-card .pic { aspect-ratio: 3 / 4; border-radius: 12px; overflow: hidden; }
+.villain-card .pic img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+
+/* Episoden */
+.eps { display: grid; gap: .8rem; }
+details.ep { border: 1px solid var(--line); border-radius: var(--r); background: var(--panel); overflow: hidden; transition: border-color .2s, background .2s; }
+details.ep[open] { border-color: rgba(130, 200, 255, .35); background: var(--bg-2); }
+details.ep summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 132px 1fr auto; gap: 1rem; align-items: center; padding: .7rem .9rem .7rem .7rem; min-height: 88px; }
+details.ep summary::-webkit-details-marker { display: none; }
+@media (max-width: 560px) { details.ep summary { grid-template-columns: 92px 1fr auto; gap: .75rem; } }
+.ep-thumb { aspect-ratio: 16 / 10; border-radius: 10px; overflow: hidden; position: relative; }
+.ep-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.ep-thumb b { position: absolute; left: .35rem; top: .3rem; font: 900 .8rem var(--f-disp); background: rgba(5, 7, 13, .8); padding: .12rem .4rem; border-radius: 6px; font-variant-numeric: tabular-nums; }
+.ep-t { display: grid; gap: .2rem; min-width: 0; }
+.ep-t strong { font: 800 1.15rem/1.15 var(--f-disp); font-variation-settings: "wdth" 110; }
+.ep-t span { font-size: .84rem; color: var(--ink-3); }
+.chev { width: 22px; height: 22px; color: var(--ink-3); transition: transform .25s; }
+details[open] > summary .chev { transform: rotate(180deg); }
+.ep-body { display: grid; gap: 1.1rem; padding: .3rem 1.1rem 1.3rem; }
+.ep-banner { aspect-ratio: 21 / 9; border-radius: 12px; overflow: hidden; }
+.ep-banner img { width: 100%; height: 100%; object-fit: cover; }
+.heart-beat { display: grid; grid-template-columns: auto 1fr; gap: .8rem; padding: .9rem 1rem; border-radius: 12px; background: linear-gradient(120deg, rgba(255, 122, 162, .16), rgba(255, 122, 162, .04)); border: 1px solid rgba(255, 122, 162, .3); }
+.heart-beat svg { width: 22px; height: 22px; color: var(--love); margin-top: .15rem; }
+.heart-beat b { display: block; font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--love); margin-bottom: .15rem; }
+.plot { display: grid; gap: .8rem; }
+.plot p { display: grid; grid-template-columns: 2rem 1fr; gap: .6rem; }
+.plot p > b { display: grid; place-items: center; width: 1.8rem; height: 1.8rem; border-radius: 8px; background: var(--panel-2); font: 900 .9rem var(--f-disp); color: var(--sky); margin-top: .05rem; }
+.ep-body h4 { font: 700 .76rem var(--f-text); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); margin-bottom: .4rem; }
+ul.dots { padding-left: 1.15rem; display: grid; gap: .35rem; }
+.endshot { padding: .9rem 1rem; border-radius: 12px; background: var(--panel-2); border-left: 3px solid var(--gold); font-style: italic; color: var(--ink); }
+
+details.spoil { border-radius: 18px; border: 1px solid rgba(255, 138, 141, .35); background: linear-gradient(160deg, rgba(230, 59, 63, .1), transparent 60%); }
+details.spoil > summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: auto 1fr auto; gap: 1rem; align-items: center; padding: 1.1rem 1.2rem; min-height: 72px; }
+details.spoil > summary::-webkit-details-marker { display: none; }
+.sp-ic { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; background: var(--red); color: #fff; font: 900 1.2rem var(--f-disp); }
+.sp-t b { display: block; font: 800 1.2rem var(--f-disp); font-variation-settings: "wdth" 112; }
+.sp-t span { font-size: .9rem; color: var(--ink-2); }
+.sp-body { display: grid; gap: 2rem; padding: .5rem 1.2rem 1.5rem; }
+.sp-body > section { display: grid; gap: .9rem; }
+.who-row { display: flex; flex-wrap: wrap; gap: .6rem; }
+.who-btn { all: unset; cursor: pointer; display: flex; align-items: center; gap: .65rem; padding: .4rem .9rem .4rem .4rem; border-radius: 99px; background: var(--panel-2); border: 1px solid var(--line); font-weight: 700; transition: background .2s; }
+.who-btn:hover { background: rgba(255, 255, 255, .15); }
+.who-btn img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; object-position: top; }
+.who-btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+.guest-list { display: grid; gap: .8rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); }
+.guest { display: grid; grid-template-columns: 64px 1fr; gap: .8rem; align-items: start; padding: .7rem; border-radius: 12px; background: var(--panel); border: 1px solid var(--line); }
+.guest img { width: 64px; height: 64px; border-radius: 10px; object-fit: cover; object-position: top; }
+.guest b { display: block; font-family: var(--f-disp); font-variation-settings: "wdth" 110; }
+.guest p { font-size: .9rem; color: var(--ink-2); }
+.meter { position: relative; height: 56px; border-radius: 12px; background: var(--panel-2); overflow: hidden; }
+.meter .fill { position: absolute; inset: 0 auto 0 0; background: linear-gradient(90deg, rgba(230, 59, 63, .9), rgba(255, 107, 111, .55)); }
+.meter svg { position: absolute; inset: 0; width: 100%; height: 100%; color: rgba(255, 255, 255, .6); }
+.meter .val { position: absolute; right: .9rem; top: 50%; transform: translateY(-50%); font: 900 1.6rem var(--f-disp); font-variant-numeric: tabular-nums; }
+dl.arcs { margin: 0; display: grid; gap: .1rem; }
+dl.arcs > div { display: grid; gap: .2rem; padding: .7rem 0; border-top: 1px solid var(--line); }
+@media (min-width: 640px) { dl.arcs > div { grid-template-columns: 8.5rem 1fr; gap: 1.2rem; } }
+dl.arcs dt { font: 800 1rem var(--f-disp); font-variation-settings: "wdth" 110; color: var(--sky); }
+dl.arcs dd { margin: 0; color: var(--ink-2); }
+.love-list { list-style: none; padding: 0; display: grid; gap: .5rem; }
+.love-list li { display: flex; gap: .6rem; align-items: flex-start; }
+.love-list svg { width: 18px; height: 18px; color: var(--love); flex: none; margin-top: .25rem; }
+.season-nav { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .7rem; }
+
+/* Figuren */
+.slider { display: grid; gap: .6rem; }
+.slider input { width: 100%; accent-color: var(--red); height: 32px; }
+.slider .ticks { display: grid; grid-template-columns: repeat(9, 1fr); font: 700 .8rem var(--f-text); color: var(--ink-3); text-align: center; }
+.slider .ticks span.on { color: #fff; }
+.slider-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .6rem; }
+.slider-head b { font: 900 1.8rem var(--f-disp); font-variation-settings: "wdth" 120; }
+.flip-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); }
+.flip { all: unset; box-sizing: border-box; width: 100%; cursor: pointer; display: block; perspective: 1100px; aspect-ratio: 3 / 4.1; }
+.flip-in { display: block; position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform .6s cubic-bezier(.2, .8, .2, 1); }
+.flip[aria-pressed="true"] .flip-in { transform: rotateY(180deg); }
+.face { position: absolute; inset: 0; border-radius: 18px; overflow: hidden; backface-visibility: hidden; -webkit-backface-visibility: hidden; border: 1px solid var(--line); background: var(--bg-2); }
+.face.front img { width: 100%; height: 100%; object-fit: cover; }
+.face.front::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(5, 7, 13, .95) 15%, transparent 60%); }
+.face.front .cap { position: absolute; left: 1rem; right: 1rem; bottom: .9rem; z-index: 1; display: grid; gap: .25rem; }
+.face.front .cap b { font: 900 1.45rem var(--f-disp); font-variation-settings: "wdth" 118; }
+.face.front .cap span { font-size: .88rem; color: var(--ink-2); }
+.face.back { transform: rotateY(180deg); padding: 1.1rem; display: grid; align-content: start; gap: .7rem; background: linear-gradient(160deg, var(--bg-3), var(--bg-2)); }
+.face.back b.n { font: 900 1.3rem var(--f-disp); font-variation-settings: "wdth" 115; }
+.face.back dl { margin: 0; display: grid; gap: .6rem; font-size: .93rem; }
+.face.back dt { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); font-weight: 700; }
+.face.back dd { margin: 0; }
+.flip:focus-visible .face { outline: 3px solid var(--gold); outline-offset: -3px; }
+.changed { position: absolute; top: .7rem; right: .7rem; z-index: 2; background: var(--red); color: #fff; font: 700 .72rem var(--f-text); padding: .2rem .55rem; border-radius: 99px; }
+.flip-hint { font-size: .9rem; color: var(--ink-3); }
+.face.back { overflow-y: auto; }
+@media (max-width: 559px) { .flip { aspect-ratio: 4 / 3.7; } .face.front img { object-position: center 20%; } }
+
+/* Paare */
+.couple-pick { display: flex; flex-wrap: wrap; gap: .5rem; }
+.seg { all: unset; cursor: pointer; display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; padding: 0 1rem; border-radius: 99px; background: var(--panel-2); border: 1px solid var(--line); font-weight: 700; font-size: .92rem; }
+.seg[aria-pressed="true"] { background: var(--love); border-color: var(--love); color: #1a0710; }
+.seg:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+.couple { display: grid; gap: 1.4rem; }
+.couple-hero { position: relative; border-radius: 20px; overflow: hidden; aspect-ratio: 21 / 8; min-height: 200px; }
+.couple-hero img { width: 100%; height: 100%; object-fit: cover; }
+.couple-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(5, 7, 13, .92) 10%, rgba(5, 7, 13, .1) 80%); }
+.couple-hero div { position: absolute; left: clamp(1rem, 4vw, 2.5rem); bottom: clamp(1rem, 3vw, 2rem); z-index: 1; display: grid; gap: .35rem; max-width: 80%; }
+.couple-hero h2 { font-size: clamp(1.8rem, 5vw, 3.2rem); }
+.couple-hero p { color: var(--love); font-weight: 700; }
+.road { position: relative; display: grid; gap: .8rem; }
+.road-step { display: grid; grid-template-columns: 4.2rem 1fr; gap: 1rem; align-items: start; }
+.road-step .s { display: grid; place-items: center; width: 4.2rem; height: 4.2rem; border-radius: 50%; border: 2px solid var(--line); font: 900 1.2rem var(--f-disp); background: var(--bg-2); }
+.road-step.kanon .s { border-color: var(--kanon); color: var(--kanon); }
+.road-step.fan .s { border-color: var(--love); color: var(--love); }
+.road-step .t { padding: .9rem 1rem; border-radius: 14px; background: var(--panel); border: 1px solid var(--line); display: grid; gap: .3rem; }
+
+/* Darsteller */
+.actor { display: grid; grid-template-rows: auto 1fr; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); background: var(--bg-2); min-width: 0; }
+.actor .ph { position: relative; aspect-ratio: 4 / 4.2; overflow: hidden; }
+.actor .ph img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.actor .ph::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(10, 15, 28, 1) 0%, transparent 45%); }
+.actor .ph div { position: absolute; left: 1rem; right: 1rem; bottom: .6rem; z-index: 1; }
+.actor .ph b { display: block; font: 900 1.3rem var(--f-disp); font-variation-settings: "wdth" 115; }
+.actor .ph span { font-size: .88rem; color: var(--ink-2); }
+.actor .bd { padding: .8rem 1rem 1.1rem; display: grid; gap: .7rem; align-content: start; }
+.fame { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
+.fame .bars { display: flex; gap: 3px; }
+.fame .bars i { width: 16px; height: 8px; border-radius: 3px; background: var(--panel-2); }
+.fame .bars i.on { background: linear-gradient(90deg, var(--gold), #ff9f43); }
+.fame span { font-size: .82rem; color: var(--ink-3); }
+.actor h4 { font: 700 .72rem var(--f-text); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); margin-bottom: .2rem; }
+.actor ul { padding-left: 1rem; font-size: .92rem; display: grid; gap: .2rem; }
+.actor p { font-size: .92rem; }
+.actor .fact { padding: .55rem .7rem; border-radius: 10px; background: var(--panel-2); font-size: .88rem; color: var(--ink-2); }
+.sortbar { display: flex; flex-wrap: wrap; gap: .5rem; }
+
+/* Lexikon */
+.lex-card { all: unset; box-sizing: border-box; width: 100%; cursor: pointer; display: grid; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); background: var(--bg-2); transition: transform .25s, border-color .25s; min-width: 0; }
+.lex-card:hover { transform: translateY(-4px); border-color: rgba(255, 255, 255, .3); }
+.lex-card:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.lex-card .ph { aspect-ratio: 4 / 3.6; overflow: hidden; }
+.lex-card .ph img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.lex-card .bd { padding: .8rem 1rem 1rem; display: grid; gap: .3rem; }
+.lex-card b { font: 800 1.15rem var(--f-disp); font-variation-settings: "wdth" 112; }
+.lex-card span { font-size: .85rem; color: var(--ink-3); }
+.lex-card p { font-size: .9rem; color: var(--ink-2); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.terms { display: grid; gap: .6rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); }
+.terms div { padding: .85rem 1rem; border-radius: 12px; background: var(--panel); border: 1px solid var(--line); }
+.terms b { display: block; font-family: var(--f-disp); font-variation-settings: "wdth" 110; color: var(--sky); margin-bottom: .2rem; }
+.terms p { font-size: .92rem; color: var(--ink-2); }
+
+/* Duell */
+.arena { display: grid; gap: 1.2rem; padding: clamp(1rem, 3vw, 1.6rem); border-radius: 22px; border: 1px solid var(--line); background: radial-gradient(ellipse at 50% 0%, rgba(58, 123, 255, .16), transparent 60%), var(--bg-2); }
+.pickers { display: grid; gap: .9rem; grid-template-columns: 1fr; }
+@media (min-width: 720px) { .pickers { grid-template-columns: 1fr auto 1fr; align-items: end; } }
+.pickers label { display: grid; gap: .35rem; font-weight: 700; font-size: .88rem; color: var(--ink-2); }
+select { font: 600 1rem var(--f-text); min-height: 50px; padding: 0 .9rem; border-radius: 12px; background: var(--bg-3); color: var(--ink); border: 1px solid var(--line); width: 100%; }
+.vs { font: 900 1.6rem var(--f-disp); color: var(--red); text-align: center; font-variation-settings: "wdth" 125; padding-bottom: .5rem; }
+.faces { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; perspective: 1000px; width: 100%; max-width: 560px; justify-self: center; }
+.fcard { position: relative; border-radius: 16px; overflow: hidden; aspect-ratio: 3 / 3.6; border: 1px solid var(--line); transition: transform .4s, box-shadow .4s, opacity .4s; }
+.fcard img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.fcard::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(5, 7, 13, .95) 12%, transparent 60%); }
+.fcard .nm { position: absolute; left: .8rem; right: .8rem; bottom: .7rem; z-index: 1; font: 800 1.05rem/1.15 var(--f-disp); font-variation-settings: "wdth" 110; }
+.fcard.l { transform: rotateY(12deg); }
+.fcard.r { transform: rotateY(-12deg); }
+.fcard.win { box-shadow: 0 0 0 3px var(--gold), 0 30px 70px -25px rgba(255, 201, 80, .6); transform: rotateY(0) scale(1.03); }
+.fcard.lose { opacity: .55; }
+.fcard .crown { position: absolute; top: .6rem; left: .6rem; z-index: 2; background: var(--gold); color: #1d1300; font: 800 .75rem var(--f-text); padding: .2rem .6rem; border-radius: 99px; }
+.statbars { display: grid; gap: .45rem; }
+.sb { display: grid; grid-template-columns: 1fr 7.5rem 1fr; gap: .5rem; align-items: center; }
+.sb .lb { text-align: center; font-size: .8rem; color: var(--ink-2); font-weight: 600; }
+.sb .h { display: flex; align-items: center; gap: .35rem; }
+.sb .h.l { flex-direction: row-reverse; }
+.sb .track { flex: 1; height: 10px; border-radius: 99px; background: var(--panel-2); display: flex; overflow: hidden; }
+.sb .h.l .track { justify-content: flex-end; }
+.sb .track i { display: block; height: 100%; border-radius: 99px; }
+.sb .h.l .track i { background: var(--sky); }
+.sb .h.r .track i { background: var(--red-2); }
+.sb .n { width: 1.2rem; text-align: center; font-size: .8rem; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.verdict { padding: 1.1rem 1.2rem; border-radius: 16px; background: linear-gradient(120deg, rgba(255, 201, 80, .14), rgba(255, 201, 80, .03)); border: 1px solid rgba(255, 201, 80, .35); display: grid; gap: .5rem; }
+.verdict .w { font: 900 1.5rem/1.15 var(--f-disp); font-variation-settings: "wdth" 115; color: var(--gold); }
+.matrix-wrap { overflow: auto; max-height: 70vh; border-radius: 16px; border: 1px solid var(--line); background: var(--bg-2); }
+table.matrix { border-collapse: separate; border-spacing: 0; font-size: .74rem; }
+table.matrix th, table.matrix td { padding: 0; }
+table.matrix thead th { position: sticky; top: 0; z-index: 2; background: var(--bg-3); height: 110px; vertical-align: bottom; }
+table.matrix thead th div { writing-mode: vertical-rl; transform: rotate(180deg); padding: .4rem .2rem; white-space: nowrap; font-weight: 600; color: var(--ink-2); }
+table.matrix tbody th { position: sticky; left: 0; z-index: 1; background: var(--bg-3); text-align: left; padding: 0 .6rem; white-space: nowrap; font-weight: 600; color: var(--ink-2); height: 30px; }
+table.matrix thead th:first-child { left: 0; z-index: 3; }
+table.matrix td button { all: unset; cursor: pointer; display: block; width: 30px; height: 30px; border-right: 1px solid rgba(255, 255, 255, .04); border-bottom: 1px solid rgba(255, 255, 255, .04); }
+table.matrix td button.rw { background: rgba(130, 200, 255, .55); }
+table.matrix td button.cw { background: rgba(255, 107, 111, .5); }
+table.matrix td button:hover, table.matrix td button:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }
+table.matrix td.self { background: repeating-linear-gradient(45deg, transparent 0 4px, rgba(255, 255, 255, .05) 4px 8px); width: 30px; height: 30px; }
+.legend-m { display: flex; flex-wrap: wrap; gap: 1rem; font-size: .88rem; color: var(--ink-2); }
+.legend-m i { display: inline-block; width: 14px; height: 14px; border-radius: 4px; margin-right: .35rem; vertical-align: -2px; }
+.board { list-style: none; padding: 0; display: grid; gap: .4rem; counter-reset: b; }
+.board li { display: grid; grid-template-columns: 2rem 40px 1fr auto; gap: .7rem; align-items: center; padding: .4rem .6rem; border-radius: 12px; background: var(--panel); counter-increment: b; }
+.board li::before { content: counter(b); font: 900 1rem var(--f-disp); color: var(--ink-3); text-align: center; }
+.board img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; object-position: top; }
+.board b { font-variant-numeric: tabular-nums; color: var(--gold); }
+
+/* Zeitleiste */
+.tl { display: grid; gap: 1rem; }
+@media (min-width: 900px) { .tl { grid-auto-flow: column; grid-auto-columns: 300px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 1rem; scrollbar-width: thin; scrollbar-color: rgba(255,255,255,.2) transparent; } }
+.tl-card { scroll-snap-align: start; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); background: var(--bg-2); display: grid; grid-template-rows: auto 1fr; }
+.tl-card.fan { border-color: rgba(255, 138, 141, .3); }
+.tl-card .ph { aspect-ratio: 16 / 10; overflow: hidden; position: relative; }
+.tl-card .ph img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.tl-card .ph b { position: absolute; left: .8rem; bottom: .5rem; font: 900 2.6rem/.9 var(--f-disp); font-variation-settings: "wdth" 125; text-shadow: 0 4px 20px rgba(0, 0, 0, .8); }
+.tl-card .bd { padding: .9rem 1rem 1.1rem; display: grid; gap: .6rem; align-content: start; }
+.tl-card ul { padding-left: 1rem; display: grid; gap: .3rem; font-size: .93rem; color: var(--ink-2); }
+
+/* Popup und Begriffe */
+dialog.who { width: min(860px, calc(100vw - 24px)); max-height: calc(100vh - 32px); padding: 0; border: 1px solid var(--line); border-radius: 22px; background: var(--bg-2); color: var(--ink); overflow: hidden; }
+dialog.who::backdrop { background: rgba(3, 5, 10, .78); backdrop-filter: blur(6px); }
+.who-in { display: grid; max-height: calc(100vh - 34px); overflow-y: auto; }
+@media (min-width: 760px) { .who-in { grid-template-columns: 300px 1fr; } }
+.who-pic { position: relative; min-height: 260px; }
+.who-pic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+@media (max-width: 759px) { .who-pic { aspect-ratio: 16 / 10; min-height: 0; } }
+.who-bd { padding: 1.4rem 1.4rem 1.6rem; display: grid; gap: 1rem; align-content: start; }
+.who-bd h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); }
+.who-bd h4 { font: 700 .74rem var(--f-text); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); margin-bottom: .3rem; }
+.who-bd .simple { font-size: 1.08rem; line-height: 1.6; }
+.marvel { padding: .85rem 1rem; border-radius: 12px; background: rgba(230, 59, 63, .12); border: 1px solid rgba(230, 59, 63, .3); }
+.marvel b { display: block; font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--red-2); margin-bottom: .2rem; }
+.close { position: absolute; top: .8rem; right: .8rem; z-index: 5; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: rgba(5, 7, 13, .8); cursor: pointer; display: grid; place-items: center; }
+.close svg { width: 20px; height: 20px; }
+.pop { position: fixed; z-index: 80; max-width: 340px; padding: .9rem 1rem; border-radius: 14px; background: #0f1830; border: 1px solid rgba(130, 200, 255, .4); box-shadow: 0 20px 50px -15px rgba(0, 0, 0, .9); font-size: .93rem; line-height: 1.5; }
+.pop b { display: block; color: var(--sky); font-family: var(--f-disp); font-variation-settings: "wdth" 110; margin-bottom: .2rem; }
+@media (max-width: 600px) { .pop { left: 12px !important; right: 12px; top: auto !important; bottom: calc(12px + env(safe-area-inset-bottom, 0px)); max-width: none; } }
+
+footer { border-top: 1px solid var(--line); background: var(--bg-2); padding-block: 2rem 3rem; color: var(--ink-3); font-size: .86rem; line-height: 1.6; }
+footer .wrap { display: grid; gap: .6rem; }
+footer b { color: var(--ink-2); }
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+</style>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#start"><b>Superman <i>&amp;</i> Lois</b><span>Staffel 5–9</span></a>
+    <nav class="links" aria-label="Hauptnavigation">
+      <a href="#start">Start</a>
+      <button type="button" id="mega-btn" aria-expanded="false" aria-controls="mega">Staffeln <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <a href="#figuren">Figuren</a>
+      <a href="#paare">Liebesgeschichten</a>
+      <a href="#darsteller">Darsteller</a>
+      <a href="#lexikon">Schurken &amp; Helden</a>
+      <a href="#duell">Wer gewinnt?</a>
+      <a href="#zeitleiste">Zeitleiste</a>
+    </nav>
+    <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="sheet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Menü</button>
+  </div>
+  <div class="mega" id="mega" hidden><div class="wrap mega-grid" id="mega-grid"></div></div>
+</header>
+
+<div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-label="Menü">
+  <div class="sheet-top"><span class="brand"><b>Superman <i>&amp;</i> Lois</b></span><button class="close" type="button" id="sheet-close" aria-label="Menü schließen" style="position:static"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div><p class="kicker" style="margin-bottom:.5rem">Staffeln</p><div class="sheet-seasons" id="sheet-seasons"></div></div>
+  <div class="sheet-links" id="sheet-links">
+    <a href="#start">Start</a><a href="#figuren">Figuren</a><a href="#paare">Liebesgeschichten</a><a href="#darsteller">Darsteller</a><a href="#lexikon">Schurken &amp; Helden</a><a href="#duell">Wer gewinnt?</a><a href="#zeitleiste">Zeitleiste</a>
+  </div>
+</div>
+
+<main id="main" tabindex="-1">
+
+<div class="view" data-view="start">
+  <section class="hero">
+    <div class="hero-bg"><img src="img/e_s4e10.webp" alt=""></div>
+    <canvas id="stage" aria-hidden="true"></canvas>
+    <div class="wrap"><div class="hero-in">
+      <p class="kicker">Die Fortsetzung, die nie gedreht wurde</p>
+      <h1>Superman &amp; Lois<span>Staffel 5 bis 9</span></h1>
+      <p class="lead">Nach Staffel 4 war Schluss – zu teuer für The CW, und Warner Bros. wollte keine zweite Superman-Geschichte neben James Gunns Kinofilm. Die Macher hatten mindestens sieben Staffeln geplant. Hier sind fünf weitere: mit Brainiac, Zod, Batman, Wonder Woman, The Flash, Aquaman, Darkseid – und mit zwei Hochzeiten auf der Kent-Farm.</p>
+      <div class="btns"><a class="btn red" href="#s5">Staffel 5 starten</a><a class="btn" href="#bisher">Was bisher geschah</a></div>
+      <div class="stats-row" id="stats-row"></div>
+    </div></div>
+  </section>
+
+  <section class="sec wrap" aria-labelledby="h-saga">
+    <div class="sec-head"><p class="kicker">Die Saga</p><h2 id="h-saga">Fünf Staffeln, fünf Gegner</h2></div>
+    <div class="rail" id="rail"></div>
+  </section>
+
+  <section class="sec wrap" id="bisher" aria-labelledby="h-bisher">
+    <div class="sec-head"><p class="kicker">Kanon · Staffel 1–4</p><h2 id="h-bisher">Was bisher geschah</h2><p class="lead">Alles, was du für Staffel 5 wissen musst. Für Details über einzelne Figuren schau in den Figuren-Tracker.</p></div>
+    <div class="quad" id="recap"></div>
+  </section>
+
+  <section class="sec wrap" aria-labelledby="h-allies">
+    <div class="sec-head"><p class="kicker">Neu in Staffel 6–9</p><h2 id="h-allies">Helden aus anderen Welten</h2><p class="lead">Superman ist auf seiner Erde der einzige Held mit Superkräften – das sagt Sam Lane im Staffel-2-Finale. Batman braucht keine Kräfte, und die anderen kommen durch Risse von anderen Erden. Tippe auf eine Karte.</p></div>
+    <div class="quad" id="allies"></div>
+  </section>
+
+  <section class="sec wrap" aria-labelledby="h-love">
+    <div class="sec-head"><p class="kicker">Liebesgeschichten</p><h2 id="h-love">Wer mit wem – und wie es endet</h2></div>
+    <div class="grid g3" id="love-teaser"></div>
+  </section>
+</div>
+
+<div class="view" data-view="s5" hidden></div>
+<div class="view" data-view="s6" hidden></div>
+<div class="view" data-view="s7" hidden></div>
+<div class="view" data-view="s8" hidden></div>
+<div class="view" data-view="s9" hidden></div>
+
+<div class="view" data-view="figuren" hidden>
+  <section class="sec wrap">
+    <div class="sec-head"><p class="kicker">Figuren-Tracker</p><h2>Wer steht wo – nach jeder Staffel</h2><p class="lead">Schieb den Regler auf eine Staffel. Tippe auf eine Karte, um sie umzudrehen: Beziehung, Kräfte und Wohnort am Ende der Staffel. Staffel 1–4 ist Kanon, ab Staffel 5 unsere Fortsetzung.</p></div>
+    <div class="slider">
+      <div class="slider-head"><b id="tr-title">Ende Staffel 4</b><span class="chip kanon" id="tr-label">Kanon</span></div>
+      <label class="small dim" for="tr-range">Staffel wählen</label>
+      <input type="range" id="tr-range" min="1" max="9" step="1" value="4">
+      <div class="ticks" id="tr-ticks" aria-hidden="true"></div>
+    </div>
+    <p class="flip-hint">Karten mit rotem „neu“ haben sich gegenüber der Staffel davor verändert.</p>
+    <div class="flip-grid" id="tr-grid"></div>
+  </section>
+</div>
+
+<div class="view" data-view="paare" hidden>
+  <section class="sec wrap">
+    <div class="sec-head"><p class="kicker">Liebesgeschichten</p><h2>Jede Liebe, Staffel für Staffel</h2><p class="lead">Von der ersten Begegnung bis zum Altar. Blaue Kreise sind Kanon, rosa Kreise unsere Fortsetzung.</p></div>
+    <div class="couple-pick" id="couple-pick" role="group" aria-label="Paar wählen"></div>
+    <div id="couple"></div>
+  </section>
+</div>
+
+<div class="view" data-view="darsteller" hidden>
+  <section class="sec wrap">
+    <div class="sec-head"><p class="kicker">Vor der Kamera · Stand Oktober 2026</p><h2>Die Darsteller</h2><p class="lead">Bekannteste Rollen, nächste Projekte und wie berühmt sie gerade sind. Die Balken zeigen unsere Einschätzung der Bekanntheit, daneben die Instagram-Follower, soweit sie sich prüfen ließen. Grant Gustin und Candice Patton sind unsere Besetzung für Flash und Iris – die Showrunner hatten sich die beiden gewünscht.</p></div>
+    <div class="sortbar" role="group" aria-label="Sortieren"><button class="seg" type="button" data-sort="cast" aria-pressed="true">Nach Rolle</button><button class="seg" type="button" data-sort="fame" aria-pressed="false">Nach Bekanntheit</button></div>
+    <div class="grid g4" id="actors"></div>
+  </section>
+</div>
+
+<div class="view" data-view="lexikon" hidden>
+  <section class="sec wrap">
+    <div class="sec-head"><p class="kicker">Einfach erklärt</p><h2>Schurken &amp; Helden</h2><p class="lead">Wer ist wer – ohne Comic-Vorwissen. Tippe auf eine Karte für die ganze Erklärung mit Marvel-Vergleich.</p></div>
+    <div class="couple-pick" id="lex-filter" role="group" aria-label="Filter">
+      <button class="seg" type="button" data-f="all" aria-pressed="true">Alle</button>
+      <button class="seg" type="button" data-f="villain" aria-pressed="false">Schurken</button>
+      <button class="seg" type="button" data-f="hero" aria-pressed="false">Helden</button>
+    </div>
+    <div class="grid g4" id="lex"></div>
+  </section>
+  <section class="sec wrap">
+    <div class="sec-head"><p class="kicker">Kleines Wörterbuch</p><h2>Begriffe, die in den Folgen vorkommen</h2></div>
+    <div class="terms" id="terms"></div>
+  </section>
+</div>
+
+<div class="view" data-view="duell" hidden>
+  <section class="sec wrap">
+    <div class="sec-head"><p class="kicker">Wer würde gewinnen?</p><h2>Jeder gegen jeden</h2><p class="lead">26 Kämpfer, 325 Paarungen – jede einzeln berechnet und begründet. Kampf auf neutralem Boden, beide in Bestform, ohne Vorbereitungszeit. Sonderregeln: Kryptonit, rote Sonne, Magie, Superschnelligkeit, Radion.</p></div>
+    <div class="arena">
+      <div class="pickers">
+        <label for="fa">Kämpfer 1<select id="fa"></select></label>
+        <div class="vs" aria-hidden="true">VS</div>
+        <label for="fb">Kämpfer 2<select id="fb"></select></label>
+      </div>
+      <div class="faces" id="faces"></div>
+      <div class="verdict" id="verdict" aria-live="polite"></div>
+      <div class="statbars" id="statbars"></div>
+    </div>
+  </section>
+  <section class="sec wrap">
+    <div class="sec-head"><h2>Alle 325 Kämpfe auf einen Blick</h2><p class="muted">Jedes Feld ist ein Kampf zwischen Zeile und Spalte. Tippe darauf, um ihn oben zu sehen.</p></div>
+    <div class="legend-m"><span><i style="background:rgba(130,200,255,.55)"></i>Kämpfer in der Zeile gewinnt</span><span><i style="background:rgba(255,107,111,.5)"></i>Kämpfer in der Spalte gewinnt</span></div>
+    <div class="matrix-wrap"><table class="matrix" id="matrix"></table></div>
+  </section>
+  <section class="sec wrap">
+    <div class="sec-head"><h2>Die Bilanz</h2><p class="muted">Siege gegen alle 25 anderen.</p></div>
+    <ol class="board" id="board"></ol>
+  </section>
+</div>
+
+<div class="view" data-view="zeitleiste" hidden>
+  <section class="sec wrap">
+    <div class="sec-head"><p class="kicker">2021 bis zum Serienende</p><h2>Zeitleiste Staffel 1–9</h2><p class="lead">Die Karten lassen sich am Computer seitlich scrollen.</p></div>
+    <div class="tl" id="tl"></div>
+  </section>
+</div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>Superman &amp; Lois · Staffel 5–9</b> ist ein privates, nicht-kommerzielles Fanprojekt und steht in keiner Verbindung zu DC, Warner Bros. oder The CW. Staffel 1–4 sind Kanon, Staffel 5–9 sind Fan-Fiktion.</p>
+    <p>Bildquellen: Szenenbilder und Darstellerfotos © The CW / Warner Bros. Television über das Arrowverse Wiki (Fandom); Comic-Abbildungen © DC Comics über die DC Database (Fandom). Recherche: Wikipedia, TVLine, Deadline, Entertainment Weekly, KryptonSite, Transkript von 4x10. Darsteller-Infos Stand Oktober 2026.</p>
+  </div>
+</footer>
+
+<dialog class="who" id="who" aria-labelledby="who-name">
+  <button class="close" type="button" id="who-close" aria-label="Schließen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <div class="who-in" id="who-in"></div>
+</dialog>
+<div class="pop" id="pop" role="tooltip" hidden></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/*__DATA__*/
+</script>
+<script>
+(function () {
+  "use strict";
+  const SEASONS = [S5, S6, S7, S8, S9];
+  const $ = id => document.getElementById(id);
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const rich = s => esc(s).replace(/\{\{([^}|]+)(?:\|([^}]+))?\}\}/g, (m, k, t) => GLOSSARY[k] ? `<button type="button" class="term" data-term="${esc(k)}">${esc(t || k)}</button>` : esc(t || k));
+  const img = (slug, alt = "", eager) => `<img src="img/${slug}.webp" alt="${esc(alt)}"${eager ? "" : ' loading="lazy"'} decoding="async">`;
+  const ICON = {
+    chev: '<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>',
+    heart: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 4.5 6.6 4.5c2 0 3.4 1.1 4.4 2.5 1-1.4 2.4-2.5 4.4-2.5 3.6 0 5.7 3.8 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>',
+    arrow: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+    back: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>'
+  };
+  const epCode = (s, e) => `${s.id}x${String(e.n).padStart(2, "0")}`;
+
+  /* ---------- Navigation ---------- */
+  const mega = $("mega"), megaBtn = $("mega-btn"), sheet = $("sheet"), menuBtn = $("menu-btn");
+  $("mega-grid").innerHTML = SEASONS.map(s => `<a href="#${s.slug}">${img(s.img)}<span><b>Staffel ${s.id}</b><i>${esc(s.title)} · ${esc(WHO[s.villain].name)}</i></span></a>`).join("");
+  $("sheet-seasons").innerHTML = SEASONS.map(s => `<a href="#${s.slug}" aria-label="Staffel ${s.id}">${s.id}</a>`).join("");
+  const setMega = open => { mega.hidden = !open; megaBtn.setAttribute("aria-expanded", String(open)); megaBtn.classList.toggle("on", open); };
+  megaBtn.addEventListener("click", e => { e.stopPropagation(); setMega(mega.hidden); });
+  document.addEventListener("click", e => { if (!mega.hidden && !mega.contains(e.target) && e.target !== megaBtn) setMega(false); });
+  const setSheet = open => { sheet.hidden = !open; menuBtn.setAttribute("aria-expanded", String(open)); document.body.style.overflow = open ? "hidden" : ""; if (open) $("sheet-close").focus(); };
+  menuBtn.addEventListener("click", () => setSheet(true));
+  $("sheet-close").addEventListener("click", () => setSheet(false));
+  document.addEventListener("keydown", e => { if (e.key === "Escape") { setMega(false); setSheet(false); hidePop(); } });
+
+  /* ---------- Begriffe (Popup) ---------- */
+  const pop = $("pop");
+  let popY = 0;
+  function hidePop() { pop.hidden = true; }
+  document.addEventListener("click", e => {
+    const t = e.target.closest(".term");
+    if (!t) { if (!pop.contains(e.target)) hidePop(); return; }
+    e.preventDefault();
+    const k = t.dataset.term;
+    pop.innerHTML = `<b>${esc(k)}</b>${esc(GLOSSARY[k])}`;
+    pop.hidden = false; popY = scrollY;
+    const r = t.getBoundingClientRect(), pw = Math.min(340, innerWidth - 24);
+    let left = Math.min(Math.max(12, r.left), innerWidth - pw - 12);
+    let top = r.bottom + 8;
+    if (top + pop.offsetHeight > innerHeight - 12) top = Math.max(12, r.top - pop.offsetHeight - 8);
+    pop.style.left = left + "px"; pop.style.top = top + "px";
+  });
+  addEventListener("scroll", () => { if (!pop.hidden && Math.abs(scrollY - popY) > 60) hidePop(); }, { passive: true });
+
+  /* ---------- Popup: Wer ist das? ---------- */
+  const dlg = $("who");
+  function openWho(slug) {
+    const w = WHO[slug]; if (!w) return;
+    $("who-in").innerHTML = `
+      <div class="who-pic">${img(w.img, w.name, true)}</div>
+      <div class="who-bd">
+        <div><p class="kicker">${w.role === "hero" ? "Held" : w.role === "both" ? "Erst Feind, dann Familie" : "Schurke"} · ${esc(w.season)}</p><h2 id="who-name">${esc(w.name)}</h2></div>
+        <div><h4>Wer ist das? Einfach erklärt</h4><p class="simple">${rich(w.simple)}</p></div>
+        <div><h4>Herkunft</h4><p class="muted">${rich(w.from)}</p></div>
+        <div><h4>Kräfte und Fähigkeiten</h4><ul class="dots">${w.powers.map(p => `<li>${rich(p)}</li>`).join("")}</ul></div>
+        <div class="marvel"><b>Für Marvel-Fans</b>${rich(w.marvel)}</div>
+        <div><h4>${w.role === "hero" ? "Warum wichtig" : "Warum gefährlich für Superman"}</h4><p>${rich(w.danger)}</p></div>
+        <p class="small dim">${esc(w.first)}</p>
+      </div>`;
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
+  }
+  $("who-close").addEventListener("click", () => dlg.close ? dlg.close() : dlg.removeAttribute("open"));
+  dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+  document.addEventListener("click", e => { const b = e.target.closest("[data-who]"); if (b) openWho(b.dataset.who); });
+
+  /* ---------- 3D-Kippen ---------- */
+  function tilt(el, max = 10) {
+    if (reduce || matchMedia("(hover: none)").matches) return;
+    el.addEventListener("pointermove", e => {
+      const r = el.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+      el.style.transform = `rotateY(${x * max}deg) rotateX(${-y * max}deg) translateZ(0)`;
+    });
+    el.addEventListener("pointerleave", () => { el.style.transform = ""; });
+  }
+
+  /* ---------- Start ---------- */
+  const totalEps = SEASONS.reduce((a, s) => a + s.episodes.length, 0);
+  const totalMin = SEASONS.reduce((a, s) => a + s.episodes.reduce((b, e) => b + e.min, 0), 0);
+  $("stats-row").innerHTML = [[5, "Staffeln"], [totalEps, "Folgen"], [Math.round(totalMin / 60), "Stunden"], [MATCHUPS.length, "Kämpfe"]].map(([n, l]) => `<div><b>${n}</b><span>${l}</span></div>`).join("");
+  $("rail").innerHTML = SEASONS.map(s => `
+    <div class="tilt"><a class="scard" href="#${s.slug}">
+      <span class="l1">${img(s.img)}</span>
+      <span class="l2">${img(WHO[s.villain].img, WHO[s.villain].name)}</span>
+      <span class="txt"><span class="num">${s.id}</span><h3>${esc(s.title)}</h3><span class="villain">Gegen ${esc(WHO[s.villain].name)} · ${s.episodes.length} Folgen</span></span>
+    </a></div>`).join("");
+  document.querySelectorAll(".scard").forEach(c => tilt(c, 12));
+  $("recap").innerHTML = RECAP.map(r => `
+    <article class="tile"><div class="img">${img(r.img, r.title)}</div><div class="body"><span class="chip kanon" style="justify-self:start">Kanon</span><h3>${esc(r.title)}</h3><p class="small muted">${esc(r.text)}</p></div></article>`).join("");
+  $("allies").innerHTML = ["batman", "ww", "flash", "aquaman"].map(k => `
+    <div class="tilt"><button class="hero-card" type="button" data-who="${k}">${img(WHO[k].img, WHO[k].name)}<span><b>${esc(WHO[k].name)}</b><i>${esc(WHO[k].season)}</i></span></button></div>`).join("");
+  document.querySelectorAll(".hero-card").forEach(c => tilt(c, 12));
+  $("love-teaser").innerHTML = COUPLES.slice(0, 3).map(c => `
+    <a class="tile" href="#paare" data-couple="${c.id}" style="text-decoration:none;color:inherit"><div class="img">${img(c.img, c.a + " und " + c.b)}</div><div class="body"><h3>${esc(c.a)} &amp; ${esc(c.b)}</h3><p class="small" style="color:var(--love);font-weight:700">${esc(c.tone)}</p><p class="small muted">${esc(c.steps[c.steps.length - 1][2])}</p></div></a>`).join("");
+
+  /* ---------- Staffelseiten ---------- */
+  function heartSvg(pct) {
+    const w = 600, m = 28, x = Math.max(60, pct / 100 * w - 70);
+    const d = `M0 ${m} L${x - 30} ${m} L${x - 22} ${m - 6} L${x - 14} ${m} L${x - 6} ${m} L${x} ${m - 20} L${x + 6} ${m + 16} L${x + 12} ${m} L${x + 24} ${m} L${x + 32} ${m - 7} L${x + 42} ${m} L${w} ${m}`;
+    return `<svg viewBox="0 0 ${w} 56" preserveAspectRatio="none" aria-hidden="true"><path d="${d}" fill="none" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"/></svg>`;
+  }
+  function epHtml(s, e) {
+    return `<details class="ep" id="${s.slug}e${e.n}">
+      <summary>
+        <span class="ep-thumb">${img(e.img, e.de)}<b>${epCode(s, e)}</b></span>
+        <span class="ep-t"><strong>${esc(e.de)}</strong><span>„${esc(e.ot)}“ · ${e.min} Min.${e.n === 13 ? " · Epilog" : ""}</span></span>
+        ${ICON.chev}
+      </summary>
+      <div class="ep-body">
+        <div class="ep-banner">${img(e.img, e.de)}</div>
+        <div class="plot">
+          <p><b>A</b><span>${rich(e.a)}</span></p>
+          <p><b>B</b><span>${rich(e.b)}</span></p>
+          <p><b>C</b><span>${rich(e.c)}</span></p>
+        </div>
+        <div><h4>Die wichtigsten Momente</h4><ul class="dots">${e.moments.map(m => `<li>${rich(m)}</li>`).join("")}</ul></div>
+        <div class="heart-beat">${ICON.heart}<div><b>Herz der Folge</b>${rich(e.herz)}</div></div>
+        <div><h4>Schlussbild</h4><p class="endshot">${rich(e.end)}</p></div>
+      </div>
+    </details>`;
+  }
+  const whoBtn = k => `<button type="button" class="who-btn" data-who="${k}">${img(WHO[k].img, "")}${esc(WHO[k].name)}</button>`;
+  function seasonHtml(s, i) {
+    const v = WHO[s.villain], total = s.episodes.reduce((a, e) => a + e.min, 0), prev = SEASONS[i - 1], next = SEASONS[i + 1];
+    return `
+    <section class="s-hero">
+      <div class="bg">${img(s.img, "", true)}</div>
+      <div class="wrap s-hero-in">
+        <div class="stack">
+          <span class="s-num" aria-hidden="true">0${s.id}</span>
+          <p class="kicker">Staffel ${s.id} · Fan-Fiktion</p>
+          <h1 style="font-size:clamp(2.2rem,6vw,4.2rem)">${esc(s.title)}</h1>
+          <div class="s-meta"><span class="chip">„${esc(s.ot)}“</span><span class="chip">${esc(s.count)}</span><span class="chip">${esc(s.air)}</span></div>
+          <div class="btns"><a class="btn red" href="#${s.slug}e1">Folge 1 lesen</a><button class="btn" type="button" data-who="${s.villain}">Wer ist ${esc(v.name.split(" (")[0])}?</button></div>
+        </div>
+        <div class="villain-frame"><button type="button" data-who="${s.villain}" aria-label="Wer ist ${esc(v.name)}?">${img(v.img, v.name, true)}<span><i>Hauptbösewicht · antippen</i><b>${esc(v.name)}</b></span></button></div>
+      </div>
+    </section>
+    <div class="wrap layout">
+      <div>
+        <section class="stack">
+          <h2>Worum es geht</h2>
+          <p class="lead" style="color:var(--ink)">${rich(s.theme)}</p>
+          <p class="muted">${rich(s.start)}</p>
+        </section>
+        <section class="stack">
+          <h2>Der Hauptbösewicht</h2>
+          <div class="villain-card">
+            <div class="pic">${img(v.img, v.name)}</div>
+            <div class="stack">
+              <h3>${esc(v.name)}</h3>
+              <p>${rich(v.simple)}</p>
+              <p class="small" style="color:var(--red-2)"><b>Marvel-Vergleich:</b> ${rich(v.marvel)}</p>
+              <div><button class="btn" type="button" data-who="${s.villain}">Mehr über ${esc(v.name.split(" (")[0])} ${ICON.arrow}</button></div>
+            </div>
+          </div>
+        </section>
+        <section class="stack" id="guide-${s.slug}">
+          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:.8rem"><h2>Die Folgen</h2><button class="btn" type="button" data-toggle-all="${s.slug}">Alle aufklappen</button></div>
+          <p class="small dim">Jede Folge ist zugeklappt – tippe sie der Reihe nach an, dann verrätst du dir nichts. Unterstrichene Begriffe kannst du antippen.</p>
+          <div class="eps" id="eps-${s.slug}">${s.episodes.map(e => epHtml(s, e)).join("")}</div>
+        </section>
+        <details class="spoil">
+          <summary><span class="sp-ic" aria-hidden="true">!</span><span class="sp-t"><b>Staffel-Rückblick mit Spoilern</b><span>Nebenschurken, Gäste, Clarks Herz, Figurenbögen, Paare, Finale. Erst öffnen, wenn du alle Folgen kennst.</span></span>${ICON.chev}</summary>
+          <div class="sp-body">
+            <section><h3>Nebenschurken</h3><div class="who-row">${s.side.map(whoBtn).join("")}</div></section>
+            <section><h3>Gäste und Rückkehrer</h3><div class="guest-list">${s.guests.map(g => `<div class="guest">${img(g.img, g.name)}<div><b>${esc(g.name)}</b><p>${rich(g.text)}</p></div></div>`).join("")}</div></section>
+            <section><h3>Clarks Herz und Kräfte</h3>
+              <div class="meter" role="img" aria-label="Clarks Kraft am Ende von Staffel ${s.id}: etwa ${s.heart.pct} Prozent"><div class="fill" style="width:${s.heart.pct}%"></div>${heartSvg(s.heart.pct)}<span class="val">${s.heart.pct} %</span></div>
+              <p class="muted">${rich(s.heart.text)}</p></section>
+            <section><h3>Figurenbögen</h3><dl class="arcs">${s.arcs.map(a => `<div><dt>${esc(a.who)}</dt><dd>${rich(a.text)}</dd></div>`).join("")}</dl></section>
+            <section><h3>Die Paare dieser Staffel</h3><ul class="love-list">${s.couples.map(c => `<li>${ICON.heart}<span>${rich(c)}</span></li>`).join("")}</ul></section>
+            <section><h3>Finale und Cliffhanger</h3><p>${rich(s.finale)}</p><p class="endshot">${rich(s.cliff)}</p></section>
+          </div>
+        </details>
+        <nav class="season-nav" aria-label="Staffeln">
+          ${prev ? `<a class="btn" href="#${prev.slug}">${ICON.back} Staffel ${prev.id}</a>` : `<a class="btn" href="#bisher">${ICON.back} Was bisher geschah</a>`}
+          ${next ? `<a class="btn red" href="#${next.slug}">Weiter zu Staffel ${next.id} ${ICON.arrow}</a>` : `<a class="btn red" href="#paare">Zu den Liebesgeschichten ${ICON.arrow}</a>`}
+        </nav>
+      </div>
+      <aside aria-label="Staffel ${s.id} auf einen Blick">
+        <div class="box">
+          <h3>Auf einen Blick</h3>
+          <dl class="facts">
+            <div><dt>Folgen</dt><dd>${esc(s.count)}</dd></div>
+            <div><dt>Gesamtlaufzeit</dt><dd>${Math.floor(total / 60)} Std. ${total % 60} Min.</dd></div>
+            <div><dt>Ausstrahlung (fiktiv)</dt><dd>${esc(s.air)}</dd></div>
+            <div><dt>Hauptbösewicht</dt><dd><button type="button" class="term" data-who="${s.villain}" style="cursor:pointer">${esc(v.name)}</button></dd></div>
+          </dl>
+        </div>
+        <div class="box">
+          <h3>Folgen</h3>
+          <ol class="ep-index">${s.episodes.map(e => `<li><a href="#${s.slug}e${e.n}"><b>${epCode(s, e)}</b><span>${esc(e.de)}</span></a></li>`).join("")}</ol>
+        </div>
+        <div class="box glow">
+          <h3>Ohne Spoiler lesen</h3>
+          <p class="small muted">Erst „Worum es geht“ und den Bösewicht, dann die Folgen der Reihe nach. Der Rückblick unten bleibt zu, bis du ihn öffnest. Am Computer scrollt diese Spalte eigenständig, wenn die Maus darüber ist.</p>
+        </div>
+      </aside>
+    </div>`;
+  }
+  SEASONS.forEach((s, i) => { document.querySelector(`[data-view="${s.slug}"]`).innerHTML = seasonHtml(s, i); });
+  document.querySelectorAll(".villain-frame button").forEach(b => tilt(b, 14));
+  document.addEventListener("click", e => {
+    const b = e.target.closest("[data-toggle-all]"); if (!b) return;
+    const open = b.textContent.trim() === "Alle aufklappen";
+    document.querySelectorAll(`#eps-${b.dataset.toggleAll} details`).forEach(d => { d.open = open; });
+    b.textContent = open ? "Alle zuklappen" : "Alle aufklappen";
+  });
+
+  /* ---------- Figuren-Tracker ---------- */
+  const range = $("tr-range");
+  $("tr-ticks").innerHTML = [1, 2, 3, 4, 5, 6, 7, 8, 9].map(n => `<span data-t="${n}">S${n}</span>`).join("");
+  function renderTrack() {
+    const s = +range.value;
+    $("tr-title").textContent = `Ende Staffel ${s}`;
+    const lab = $("tr-label"); lab.textContent = s <= 4 ? "Kanon" : "Fan-Fiktion"; lab.className = "chip " + (s <= 4 ? "kanon" : "fan");
+    document.querySelectorAll("#tr-ticks span").forEach(t => t.classList.toggle("on", +t.dataset.t === s));
+    $("tr-grid").innerHTML = TRACK.map(c => {
+      const t = c.t[s], p = c.t[s - 1], ch = p && p.join() !== t.join();
+      return `<button class="flip" type="button" aria-pressed="false" aria-label="${esc(c.name)}: ${esc(t[0])}. Antippen zum Umdrehen">
+        <span class="flip-in">
+          <span class="face front">${img(c.img, c.name)}${ch ? '<span class="changed">neu</span>' : ""}<span class="cap"><b>${esc(c.name)}</b><span>${esc(t[0])}</span></span></span>
+          <span class="face back"><b class="n">${esc(c.name)} · S${s}</b><dl><div><dt>Beziehung</dt><dd>${esc(t[0])}</dd></div><div><dt>Kräfte und Lage</dt><dd>${esc(t[1])}</dd></div><div><dt>Wohnort</dt><dd>${esc(t[2])}</dd></div></dl></span>
+        </span></button>`;
+    }).join("");
+  }
+  range.addEventListener("input", renderTrack);
+  $("tr-grid").addEventListener("click", e => { const f = e.target.closest(".flip"); if (f) f.setAttribute("aria-pressed", f.getAttribute("aria-pressed") === "true" ? "false" : "true"); });
+  renderTrack();
+
+  /* ---------- Paare ---------- */
+  let couple = COUPLES[1].id;
+  function renderCouple() {
+    $("couple-pick").innerHTML = COUPLES.map(c => `<button class="seg" type="button" data-c="${c.id}" aria-pressed="${c.id === couple}">${esc(c.a)} &amp; ${esc(c.b)}</button>`).join("");
+    const c = COUPLES.find(x => x.id === couple);
+    $("couple").innerHTML = `<div class="couple">
+      <div class="couple-hero">${img(c.img, c.a + " und " + c.b)}<div><h2>${esc(c.a)} &amp; ${esc(c.b)}</h2><p>${esc(c.tone)}</p></div></div>
+      <div class="road">${c.steps.map(([s, l, t]) => `<div class="road-step ${l}"><span class="s">S${s}</span><div class="t"><span class="chip ${l}" style="justify-self:start">${l === "kanon" ? "Kanon" : "Fan-Fiktion"}</span><p>${rich(t)}</p></div></div>`).join("")}</div>
+    </div>`;
+  }
+  $("couple-pick").addEventListener("click", e => { const b = e.target.closest("[data-c]"); if (b) { couple = b.dataset.c; renderCouple(); } });
+  document.addEventListener("click", e => { const a = e.target.closest("[data-couple]"); if (a) { couple = a.dataset.couple; renderCouple(); } });
+  renderCouple();
+
+  /* ---------- Darsteller ---------- */
+  function renderActors(by) {
+    const list = by === "fame" ? [...ACTORS].sort((a, b) => b.fame - a.fame) : ACTORS;
+    $("actors").innerHTML = list.map(a => `
+      <article class="actor">
+        <div class="ph">${img(a.img, a.name)}<div><b>${esc(a.name)}</b><span>${esc(a.role)}</span></div></div>
+        <div class="bd">
+          <div class="fame" aria-label="Bekanntheit ${a.fame} von 5"><span class="bars">${[1, 2, 3, 4, 5].map(n => `<i class="${n <= a.fame ? "on" : ""}"></i>`).join("")}</span>${a.followers !== "unbekannt" ? `<span>Instagram: ${esc(a.followers)}</span>` : ""}</div>
+          <div><h4>Bekannt aus</h4><ul>${a.known.map(k => `<li>${esc(k)}</li>`).join("")}</ul></div>
+          <div><h4>Als Nächstes</h4><p>${esc(a.next)}</p></div>
+          <p class="fact">${esc(a.fact)}</p>
+        </div>
+      </article>`).join("");
+  }
+  document.querySelector(".sortbar").addEventListener("click", e => {
+    const b = e.target.closest("[data-sort]"); if (!b) return;
+    document.querySelectorAll(".sortbar .seg").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+    renderActors(b.dataset.sort);
+  });
+  renderActors("cast");
+
+  /* ---------- Lexikon ---------- */
+  function renderLex(f) {
+    $("lex").innerHTML = Object.entries(WHO).filter(([k, w]) => f === "all" || w.role === f || (w.role === "both" && f === "hero")).map(([k, w]) => `
+      <button class="lex-card" type="button" data-who="${k}"><span class="ph">${img(w.img, w.name)}</span><span class="bd"><b>${esc(w.name)}</b><span>${esc(w.season)}</span><p>${esc(w.simple)}</p></span></button>`).join("");
+  }
+  $("lex-filter").addEventListener("click", e => {
+    const b = e.target.closest("[data-f]"); if (!b) return;
+    document.querySelectorAll("#lex-filter .seg").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+    renderLex(b.dataset.f);
+  });
+  renderLex("all");
+  $("terms").innerHTML = Object.keys(GLOSSARY).sort((a, b) => a.localeCompare(b, "de")).map(k => `<div><b>${esc(k)}</b><p>${esc(GLOSSARY[k])}</p></div>`).join("");
+
+  /* ---------- Duell ---------- */
+  const FI = Object.fromEntries(FIGHTERS.map(f => [f.id, f]));
+  const short = f => ({ superman: "Superman", superman8: "Superman S8", lois: "Lois (Kräfte)" })[f.id] || f.name;
+  const MU = {};
+  MATCHUPS.forEach(m => { MU[m[0] + "|" + m[1]] = m; MU[m[1] + "|" + m[0]] = m; });
+  const fa = $("fa"), fb = $("fb");
+  const opts = `<optgroup label="Helden">${FIGHTERS.filter(f => f.side === "held").map(f => `<option value="${f.id}">${esc(f.name)}</option>`).join("")}</optgroup><optgroup label="Schurken">${FIGHTERS.filter(f => f.side === "schurke").map(f => `<option value="${f.id}">${esc(f.name)}</option>`).join("")}</optgroup>`;
+  fa.innerHTML = opts; fb.innerHTML = opts; fa.value = "superman"; fb.value = "darkseid";
+  function duel() {
+    const a = FI[fa.value], b = FI[fb.value];
+    if (a.id === b.id) {
+      $("faces").innerHTML = [a, b].map((f, i) => `<div class="fcard ${i ? "r" : "l"}">${img(f.img, f.name)}<span class="nm">${esc(f.name)}</span></div>`).join("");
+      $("verdict").innerHTML = `<span class="w">Spiegelkampf</span><p>Gleiche Kräfte, gleiche Tricks. Das endet wie Superman gegen Bizarro: unentschieden und sehr laut.</p>`;
+      $("statbars").innerHTML = ""; return;
+    }
+    const m = MU[a.id + "|" + b.id], win = m[2];
+    $("faces").innerHTML = [a, b].map((f, i) => `<div class="fcard ${i ? "r" : "l"} ${f.id === win ? "win" : "lose"}">${f.id === win ? '<span class="crown">Sieger</span>' : ""}${img(f.img, f.name)}<span class="nm">${esc(f.name)}</span></div>`).join("");
+    const label = m[3] === "override" ? "Unser Urteil" : ({ "hauchdünn": "Hauchdünn", "knapp": "Knapp", "klar": "Klar", "deutlich": "Deutlich" })[m[3]];
+    $("verdict").innerHTML = `<span class="w">${esc(FI[win].name)} gewinnt</span><p class="small dim">${label}${m[3] === "override" ? " – mit Blick auf den Kanon und unsere Geschichte" : ` · ${a.id === m[0] ? m[4] : m[5]} zu ${a.id === m[0] ? m[5] : m[4]} Punkten`}</p><p>${esc(m[6])}</p>`;
+    $("statbars").innerHTML = STATS.map((n, i) => `<div class="sb"><div class="h l"><span class="n">${a.s[i]}</span><span class="track"><i style="width:${a.s[i] * 10}%"></i></span></div><span class="lb">${n}</span><div class="h r"><span class="track"><i style="width:${b.s[i] * 10}%"></i></span><span class="n">${b.s[i]}</span></div></div>`).join("");
+  }
+  fa.addEventListener("change", duel); fb.addEventListener("change", duel); duel();
+  $("matrix").innerHTML = `<thead><tr><th></th>${FIGHTERS.map(f => `<th scope="col"><div>${esc(short(f))}</div></th>`).join("")}</tr></thead><tbody>` +
+    FIGHTERS.map(r => `<tr><th scope="row">${esc(short(r))}</th>${FIGHTERS.map(c => {
+      if (r.id === c.id) return `<td class="self"></td>`;
+      const m = MU[r.id + "|" + c.id];
+      return `<td><button type="button" class="${m[2] === r.id ? "rw" : "cw"}" data-a="${r.id}" data-b="${c.id}" title="${esc(r.name)} gegen ${esc(c.name)}: ${esc(FI[m[2]].name)} gewinnt" aria-label="${esc(r.name)} gegen ${esc(c.name)}: ${esc(FI[m[2]].name)} gewinnt"></button></td>`;
+    }).join("")}</tr>`).join("") + `</tbody>`;
+  $("matrix").addEventListener("click", e => {
+    const b = e.target.closest("button[data-a]"); if (!b) return;
+    fa.value = b.dataset.a; fb.value = b.dataset.b; duel();
+    document.querySelector(".arena").scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+  });
+  const wins = {}; FIGHTERS.forEach(f => wins[f.id] = 0); MATCHUPS.forEach(m => wins[m[2]]++);
+  $("board").innerHTML = [...FIGHTERS].sort((x, y) => wins[y.id] - wins[x.id]).map(f => `<li>${img(f.img, "")}<span>${esc(f.name)}</span><b>${wins[f.id]} Siege</b></li>`).join("");
+
+  /* ---------- Zeitleiste ---------- */
+  $("tl").innerHTML = TIMELINE.map(t => `
+    <article class="tl-card ${t.label}"><div class="ph">${img(t.img, "Staffel " + t.s)}<b>S${t.s}</b></div>
+      <div class="bd"><div class="chips"><span class="chip ${t.label}">${t.label === "kanon" ? "Kanon" : "Fan-Fiktion"}</span><span class="chip">${esc(t.year)}</span></div>
+      <ul>${t.items.map(i => `<li>${esc(i)}</li>`).join("")}</ul>${t.s >= 5 ? `<a class="small" href="#s${t.s}">Zur Staffel ${t.s}</a>` : ""}</div></article>`).join("");
+
+  /* ---------- 3D-Bühne im Start-Hero ---------- */
+  (function stage() {
+    const cv = $("stage");
+    if (!window.THREE || !cv) return;
+    let renderer;
+    try { renderer = new THREE.WebGLRenderer({ canvas: cv, alpha: true, antialias: true }); } catch (e) { return; }
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+    const scene = new THREE.Scene(), cam = new THREE.PerspectiveCamera(45, 1, .1, 200);
+    cam.position.set(0, 0, 14);
+    scene.add(new THREE.AmbientLight(0x6688ff, .35));
+    const l1 = new THREE.PointLight(0x5aa0ff, 2.2, 60); l1.position.set(6, 6, 10); scene.add(l1);
+    const l2 = new THREE.PointLight(0xff3b40, 1.6, 60); l2.position.set(-8, -4, 6); scene.add(l2);
+    const group = new THREE.Group(); scene.add(group);
+    const g = new THREE.OctahedronGeometry(2.2, 0); g.scale(1, 1.75, 1);
+    const crystal = new THREE.Mesh(g, new THREE.MeshStandardMaterial({ color: 0x9fd4ff, emissive: 0x1b4fd8, emissiveIntensity: .55, metalness: .25, roughness: .08, transparent: true, opacity: .82, flatShading: true }));
+    group.add(crystal);
+    crystal.add(new THREE.LineSegments(new THREE.EdgesGeometry(g), new THREE.LineBasicMaterial({ color: 0xcfe8ff, transparent: true, opacity: .8 })));
+    const shards = [];
+    for (let i = 0; i < 9; i++) {
+      const sg = new THREE.OctahedronGeometry(.25 + Math.random() * .35, 0); sg.scale(1, 1.8, 1);
+      const sm = new THREE.Mesh(sg, new THREE.MeshStandardMaterial({ color: i % 3 ? 0x9fd4ff : 0xff6b6f, emissive: i % 3 ? 0x1b4fd8 : 0x8a1014, emissiveIntensity: .6, roughness: .1, metalness: .3, flatShading: true }));
+      sm.userData = { r: 3.4 + Math.random() * 2.2, a: Math.random() * Math.PI * 2, s: .15 + Math.random() * .25, y: (Math.random() - .5) * 3.5 };
+      group.add(sm); shards.push(sm);
+    }
+    const N = 1600, pos = new Float32Array(N * 3);
+    for (let i = 0; i < N; i++) { pos[i * 3] = (Math.random() - .5) * 90; pos[i * 3 + 1] = (Math.random() - .5) * 60; pos[i * 3 + 2] = -Math.random() * 70; }
+    const sgeo = new THREE.BufferGeometry(); sgeo.setAttribute("position", new THREE.BufferAttribute(pos, 3));
+    const stars = new THREE.Points(sgeo, new THREE.PointsMaterial({ color: 0xbfd8ff, size: .09, transparent: true, opacity: .8 }));
+    scene.add(stars);
+    let mx = 0, my = 0, visible = true, t0 = performance.now();
+    addEventListener("pointermove", e => { mx = e.clientX / innerWidth - .5; my = e.clientY / innerHeight - .5; }, { passive: true });
+    function size() {
+      const r = cv.getBoundingClientRect(); renderer.setSize(r.width, r.height, false); cam.aspect = r.width / Math.max(1, r.height); cam.updateProjectionMatrix();
+      const halfW = Math.tan(Math.PI / 8) * cam.position.z * cam.aspect, wide = r.width >= 1100, mid = r.width >= 700;
+      group.position.x = halfW * (wide ? .55 : mid ? .72 : .4); group.position.y = wide ? .2 : mid ? .6 : 2.6; group.scale.setScalar(wide ? 1 : mid ? .8 : .55);
+    }
+    size(); addEventListener("resize", size);
+    new IntersectionObserver(es => { visible = es[0].isIntersecting; }).observe(cv);
+    function frame(now) {
+      const t = (now - t0) / 1000;
+      crystal.rotation.y = t * .35; crystal.rotation.x = Math.sin(t * .4) * .12;
+      shards.forEach(s => { const u = s.userData, a = u.a + t * u.s; s.position.set(Math.cos(a) * u.r, u.y + Math.sin(t + u.a) * .3, Math.sin(a) * u.r); s.rotation.y = t; });
+      group.rotation.y += ((mx * .6) - group.rotation.y) * .05; group.rotation.x += ((my * .3) - group.rotation.x) * .05;
+      stars.rotation.y = t * .01;
+      renderer.render(scene, cam);
+    }
+    if (reduce) { frame(t0 + 2000); return; }
+    (function loop(now) { if (visible && !document.hidden && !document.querySelector('[data-view="start"]').hidden) frame(now); requestAnimationFrame(loop); })(t0);
+  })();
+
+  /* ---------- Router ---------- */
+  const views = [...document.querySelectorAll(".view")];
+  const navLinks = [...document.querySelectorAll(".links a, .sheet-links a, .sheet-seasons a")];
+  function route() {
+    let h = (location.hash || "#start").slice(1), target = null;
+    const ep = h.match(/^(s[5-9])e(\d+)$/);
+    if (ep) { target = h; h = ep[1]; }
+    if (h === "bisher") { target = "bisher"; h = "start"; }
+    if (!views.some(v => v.dataset.view === h)) h = "start";
+    views.forEach(v => { v.hidden = v.dataset.view !== h; });
+    navLinks.forEach(a => { if (a.getAttribute("href") === "#" + h) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
+    megaBtn.classList.toggle("on", /^s[5-9]$/.test(h));
+    setMega(false); setSheet(false); hidePop();
+    if (target) { const d = $(target); if (d) { if (d.tagName === "DETAILS") d.open = true; requestAnimationFrame(() => setTimeout(() => d.scrollIntoView({ block: "start" }), 60)); return; } }
+    window.scrollTo(0, 0);
+  }
+  addEventListener("hashchange", () => { route(); $("main").focus({ preventScroll: true }); });
+  route();
+})();
+</script>

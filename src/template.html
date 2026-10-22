@@ -1,0 +1,957 @@
+<title>Superman &amp; Lois: Staffel 5–7</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Was wäre, wenn Superman &amp; Lois nach Staffel 4 weitergegangen wäre? Episodenguide, Bösewicht-Lexikon, Power-Ranking und Figuren-Tracker für Staffel 5 bis 7 – ein privates Fanprojekt.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,800;1,400&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+/* Layout: Fan-Wiki im Stil einer Zeitungs-Website (Daily Planet, Smallville Gazette).
+   Weißes Papier, blaue Navigationsleiste, Textspalte mit fester Seitenspalte, Kinobilder im Format 2,39:1. */
+:root {
+  --paper: #ffffff;
+  --paper-2: #f3f5f9;
+  --paper-3: #e9edf3;
+  --ink: #131925;
+  --ink-2: #3d475a;
+  --ink-3: #5d6779;
+  --rule: #d3d9e3;
+  --blue: #1b4c97;
+  --blue-2: #133a76;
+  --on-blue: #ffffff;
+  --link: #1b4c97;
+  --red: #b0232c;
+  --gold: #e0a52a;
+  --kanon-fg: #1b4c97; --kanon-bg: #e4ecf8;
+  --plan-fg: #7a5200; --plan-bg: #fbf0d4;
+  --fan-fg: #9a1d26; --fan-bg: #fbe5e6;
+  --bar-bg: #e4e8ef;
+  --f-head: "Libre Franklin", "Franklin Gothic Medium", "Helvetica Neue", Arial, sans-serif;
+  --f-text: "PT Serif", Georgia, "Times New Roman", serif;
+  --wrap: 1140px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0f1520; --paper-2: #161e2c; --paper-3: #1d2738;
+    --ink: #e8ecf3; --ink-2: #b5bfce; --ink-3: #8f9aad; --rule: #2a3447;
+    --blue: #1b468a; --blue-2: #2758a8; --on-blue: #ffffff; --link: #8fb5ef;
+    --red: #e45a63; --gold: #e6b44f;
+    --kanon-fg: #9fc1f2; --kanon-bg: rgba(143, 181, 239, .14);
+    --plan-fg: #eec66c; --plan-bg: rgba(230, 180, 79, .14);
+    --fan-fg: #f39298; --fan-bg: rgba(228, 90, 99, .15);
+    --bar-bg: #243045;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0f1520; --paper-2: #161e2c; --paper-3: #1d2738;
+  --ink: #e8ecf3; --ink-2: #b5bfce; --ink-3: #8f9aad; --rule: #2a3447;
+  --blue: #1b468a; --blue-2: #2758a8; --on-blue: #ffffff; --link: #8fb5ef;
+  --red: #e45a63; --gold: #e6b44f;
+  --kanon-fg: #9fc1f2; --kanon-bg: rgba(143, 181, 239, .14);
+  --plan-fg: #eec66c; --plan-bg: rgba(230, 180, 79, .14);
+  --fan-fg: #f39298; --fan-bg: rgba(228, 90, 99, .15);
+  --bar-bg: #243045;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; scroll-padding-top: 4rem; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+body { background: var(--paper); color: var(--ink); font-family: var(--f-text); font-size: 1.0625rem; line-height: 1.65; -webkit-text-size-adjust: 100%; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--blue); }
+a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+h1, h2, h3, h4 { font-family: var(--f-head); font-weight: 800; line-height: 1.12; letter-spacing: -.012em; margin: 0; text-wrap: balance; color: var(--ink); }
+h1 { font-size: clamp(2rem, 5.4vw, 3.3rem); }
+h2 { font-size: clamp(1.45rem, 3.4vw, 2rem); }
+h3 { font-size: 1.22rem; }
+h4 { font-size: 1.02rem; }
+p { margin: 0; }
+ul, ol { margin: 0; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.sans { font-family: var(--f-head); }
+.kicker { font-family: var(--f-head); font-weight: 600; font-size: .86rem; color: var(--red); }
+.muted { color: var(--ink-2); }
+.small { font-size: .92rem; }
+.lead { font-size: 1.2rem; line-height: 1.55; }
+.prose { max-width: 68ch; }
+.flow > * + * { margin-top: 1rem; }
+
+/* Kopf */
+.masthead { padding-block: 1rem .85rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem 1rem; }
+.masthead .name { font-family: var(--f-head); font-weight: 800; font-size: clamp(1.5rem, 4vw, 2rem); letter-spacing: -.02em; color: var(--ink); text-decoration: none; }
+.masthead .name span { color: var(--red); }
+.masthead .sub { font-style: italic; color: var(--ink-2); font-size: 1rem; }
+.navbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--blue); color: var(--on-blue); }
+.nav-in { display: flex; align-items: stretch; }
+.nav-toggle { display: none; font: 600 .95rem var(--f-head); color: var(--on-blue); background: none; border: 0; padding: .8rem 0; min-height: 48px; cursor: pointer; align-items: center; gap: .6rem; }
+.nav-toggle svg { width: 20px; height: 20px; }
+.nav-toggle .cur { font-weight: 400; opacity: .85; }
+.nav-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; }
+.nav-list a { display: flex; align-items: center; min-height: 48px; padding: 0 .55rem; color: var(--on-blue); text-decoration: none; font-family: var(--f-head); font-weight: 600; font-size: .88rem; white-space: nowrap; }
+.nav-list li:first-child a { padding-left: 0; }
+.nav-list a:hover { background: var(--blue-2); }
+.nav-list a[aria-current="page"] { box-shadow: inset 0 -4px 0 var(--gold); }
+@media (max-width: 959px) {
+  .nav-in { flex-direction: column; }
+  .nav-toggle { display: flex; }
+  .nav-list { display: none; flex-direction: column; padding-bottom: .5rem; }
+  .navbar.open .nav-list { display: flex; }
+  .nav-list li:first-child a { padding-left: .75rem; }
+  .nav-list a { border-top: 1px solid rgba(255, 255, 255, .14); }
+  .nav-list a[aria-current="page"] { box-shadow: inset 4px 0 0 var(--gold); }
+}
+
+main { padding-block: 1.75rem 4rem; }
+.view { display: grid; gap: 2.5rem; }
+.view > section { display: grid; gap: 1rem; min-width: 0; }
+.rule-top { border-top: 2px solid var(--ink); padding-top: .9rem; }
+
+/* Labels */
+.tag { display: inline-flex; align-items: center; gap: .3rem; font: 600 .76rem var(--f-head); letter-spacing: .01em; padding: .18rem .45rem; border-radius: 3px; white-space: nowrap; }
+.tag svg { width: 12px; height: 12px; flex: none; }
+.tag-kanon { color: var(--kanon-fg); background: var(--kanon-bg); }
+.tag-geplant { color: var(--plan-fg); background: var(--plan-bg); }
+.tag-fan { color: var(--fan-fg); background: var(--fan-bg); }
+.tags { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .6rem; }
+
+/* Bilder */
+figure { margin: 0; }
+figure img, .thumb img { display: block; width: 100%; height: 100%; object-fit: cover; background: var(--paper-3); }
+figcaption, .cr { font: 400 .74rem/1.4 var(--f-head); color: var(--ink-3); margin-top: .4rem; display: block; }
+figcaption a, .cr a { color: var(--ink-3); }
+.ai { color: var(--red); font-weight: 600; }
+.cine { aspect-ratio: 2.39 / 1; max-width: 100%; overflow: hidden; }
+.wide { aspect-ratio: 16 / 9; max-width: 100%; overflow: hidden; }
+.portrait { aspect-ratio: 3 / 4; max-width: 100%; overflow: hidden; }
+.portrait img { object-position: top; }
+.square { aspect-ratio: 1; max-width: 100%; overflow: hidden; }
+
+/* Spalten */
+.cols { display: grid; gap: 2.5rem; }
+@media (min-width: 960px) { .cols { grid-template-columns: minmax(0, 1fr) 300px; gap: 3rem; align-items: start; } .cols > aside { position: sticky; top: 4.25rem; } }
+.cols > div, .cols > aside { display: grid; gap: 2.25rem; min-width: 0; align-content: start; }
+.box { background: var(--paper-2); border-top: 3px solid var(--blue); padding: 1rem 1.1rem 1.15rem; display: grid; gap: .7rem; min-width: 0; }
+.box h3 { font-size: 1.05rem; }
+.box.red { border-top-color: var(--red); }
+dl.facts { display: grid; gap: .55rem; margin: 0; font-size: .95rem; }
+dl.facts dt { font: 600 .78rem var(--f-head); color: var(--ink-3); }
+dl.facts dd { margin: 0; }
+
+/* Buttons */
+.btns { display: flex; flex-wrap: wrap; gap: .6rem; }
+.btn { display: inline-flex; align-items: center; min-height: 46px; padding: .55rem 1.05rem; font: 600 .95rem var(--f-head); text-decoration: none; border: 2px solid var(--link); color: var(--link); background: transparent; border-radius: 3px; cursor: pointer; touch-action: manipulation; }
+.btn:hover { background: var(--paper-2); }
+.btn.primary { background: var(--blue); border-color: var(--blue); color: var(--on-blue); }
+.btn.primary:hover { background: var(--blue-2); border-color: var(--blue-2); }
+
+/* Start */
+.opener { display: grid; gap: 1.1rem; }
+.opener h1 { max-width: 18ch; }
+.dated { list-style: none; padding: 0; display: grid; gap: .8rem; }
+.dated li { display: grid; grid-template-columns: 5.6rem 1fr; gap: .9rem; border-top: 1px solid var(--rule); padding-top: .8rem; }
+.dated .d { font: 800 .9rem var(--f-head); color: var(--link); font-variant-numeric: tabular-nums; }
+blockquote { margin: 0; padding: .2rem 0 .2rem 1rem; border-left: 4px solid var(--red); font-style: italic; font-size: 1.15rem; }
+blockquote cite { display: block; font: normal .82rem var(--f-head); color: var(--ink-3); margin-top: .35rem; }
+.legend { display: grid; gap: .8rem; }
+.legend > div { display: grid; gap: .3rem; justify-items: start; }
+.seasons { list-style: none; padding: 0; display: grid; }
+.seasons li { border-top: 1px solid var(--rule); }
+.seasons a { display: grid; gap: .9rem; padding-block: 1.1rem; color: var(--ink); text-decoration: none; }
+@media (min-width: 640px) { .seasons a { grid-template-columns: 290px 1fr; align-items: center; gap: 1.4rem; } }
+.seasons a:hover h3 { color: var(--link); text-decoration: underline; }
+.seasons .sn { font: 600 .84rem var(--f-head); color: var(--red); }
+.seasons h3 { font-size: 1.5rem; margin: .15rem 0 .35rem; }
+.fixes { display: grid; }
+.fix { display: grid; gap: .35rem; padding-block: .85rem; border-top: 1px solid var(--rule); }
+@media (min-width: 760px) { .fix { grid-template-columns: 1fr 1.4fr; gap: 1.5rem; } }
+.fix .claim { font-family: var(--f-head); font-size: .92rem; color: var(--ink-3); }
+.fix .claim s { text-decoration-color: var(--red); }
+.fix b { font: 600 .74rem var(--f-head); color: var(--ink-3); display: block; }
+
+/* Personen */
+.people { list-style: none; padding: 0; display: grid; }
+.people > li { display: grid; grid-template-columns: 112px 1fr; gap: 1rem; padding-block: 1rem; border-top: 1px solid var(--rule); align-items: start; }
+.people > li:first-child { border-top: 0; padding-top: .2rem; }
+.people .thumb { width: 112px; aspect-ratio: 16 / 9; overflow: hidden; }
+.people h3, .people h4 { font-size: 1.05rem; margin-bottom: .2rem; }
+.people p { font-size: .97rem; }
+.people.small > li { grid-template-columns: 72px 1fr; gap: .75rem; padding-block: .75rem; }
+.people.small .thumb { width: 72px; aspect-ratio: 1; }
+.people.small h4 { font-size: .95rem; }
+.people.small p { font-size: .88rem; }
+.people .m { margin-top: .45rem; font-size: .93rem; color: var(--ink-2); }
+.people .m b { font: 600 .78rem var(--f-head); color: var(--plan-fg); }
+.register { display: grid; }
+@media (min-width: 860px) { .register { grid-template-columns: 1fr 1fr; column-gap: 2.5rem; } }
+.person { display: grid; gap: .6rem; padding-block: 1.25rem; border-top: 1px solid var(--rule); align-content: start; }
+.person .head { display: grid; grid-template-columns: 150px 1fr; gap: 1rem; align-items: center; }
+.person .thumb { aspect-ratio: 16 / 9; overflow: hidden; }
+.person .actor { font: 400 .86rem var(--f-head); color: var(--ink-3); }
+.marvel { font-size: .95rem; padding-left: .8rem; border-left: 3px solid var(--gold); }
+.marvel b { font: 600 .78rem var(--f-head); color: var(--plan-fg); display: block; }
+.locs { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); }
+.locs b { font-family: var(--f-head); display: block; margin-top: .5rem; }
+.cast { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: .9rem; }
+.cast b { font: 600 .82rem/1.3 var(--f-head); display: block; margin-top: .35rem; }
+ul.rules { padding-left: 1.1rem; display: grid; gap: .45rem; }
+
+/* Staffelseiten */
+.s-head { display: grid; gap: 1rem; }
+.s-title { display: grid; grid-template-columns: auto 1fr; gap: .25rem 1.1rem; align-items: center; }
+.s-title .big { grid-row: span 2; font: 800 clamp(4rem, 12vw, 6.5rem)/.85 var(--f-head); color: var(--link); letter-spacing: -.04em; }
+.s-title .ot { font: italic 400 1rem var(--f-text); color: var(--ink-2); }
+.villain { display: grid; gap: 1.1rem; }
+@media (min-width: 640px) { .villain { grid-template-columns: 210px 1fr; } }
+.heart .meter { position: relative; height: 46px; background: var(--bar-bg); overflow: hidden; color: var(--ink); }
+.heart .fill { position: absolute; inset: 0 auto 0 0; background: var(--red); opacity: .85; }
+.heart .meter svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.heart .val { position: absolute; right: .7rem; top: 50%; transform: translateY(-50%); font: 800 1.35rem var(--f-head); font-variant-numeric: tabular-nums; }
+.scale { display: flex; justify-content: space-between; font: 400 .74rem var(--f-head); color: var(--ink-3); font-variant-numeric: tabular-nums; }
+dl.arcs { display: grid; margin: 0; }
+dl.arcs > div { display: grid; gap: .25rem; padding-block: .8rem; border-top: 1px solid var(--rule); }
+@media (min-width: 640px) { dl.arcs > div { grid-template-columns: 9rem 1fr; gap: 1.2rem; } }
+dl.arcs dt { font: 800 .98rem var(--f-head); color: var(--link); }
+dl.arcs dd { margin: 0; }
+ul.dots { padding-left: 1.15rem; display: grid; gap: .35rem; }
+.endshot { font-style: italic; padding: .9rem 1rem; background: var(--paper-2); border-left: 4px solid var(--gold); }
+.ep-index { list-style: none; padding: 0; display: grid; font-family: var(--f-head); font-size: .9rem; }
+.ep-index a { display: grid; grid-template-columns: 3rem 1fr; gap: .4rem; padding: .32rem 0; text-decoration: none; color: var(--ink); border-bottom: 1px dotted var(--rule); }
+.ep-index a:hover { color: var(--link); }
+.ep-index .c { color: var(--ink-3); font-variant-numeric: tabular-nums; }
+details.spoilers { border-top: 2px solid var(--ink); }
+details.spoilers > summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: auto 1fr auto; gap: .9rem; align-items: center; padding: 1rem 1.1rem; margin-top: .9rem; background: var(--fan-bg); min-height: 64px; }
+details.spoilers > summary::-webkit-details-marker { display: none; }
+details.spoilers > summary:hover .sp-t b { text-decoration: underline; }
+.sp-icon { width: 2rem; height: 2rem; display: grid; place-items: center; border-radius: 50%; background: var(--red); color: #fff; font: 800 1.1rem var(--f-head); }
+.sp-t { display: grid; gap: .15rem; min-width: 0; }
+.sp-t b { font: 800 1.15rem/1.2 var(--f-head); color: var(--fan-fg); }
+.sp-t span { font: 400 .86rem/1.4 var(--f-head); color: var(--ink-2); }
+details.spoilers[open] > summary .chev { transform: rotate(180deg); }
+.sp-body { display: grid; gap: 2.25rem; padding-top: 1.75rem; }
+.sp-body > section { display: grid; gap: 1rem; min-width: 0; }
+.spoil-note { display: flex; gap: .6rem; align-items: center; padding: .6rem .8rem; background: var(--fan-bg); font: 400 .9rem var(--f-head); color: var(--ink-2); }
+.spoil-note b { color: var(--fan-fg); }
+.season-nav { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .6rem; border-top: 1px solid var(--rule); padding-top: 1.1rem; }
+
+/* Episoden */
+.ep-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: .8rem; border-top: 2px solid var(--ink); padding-top: .9rem; }
+.eps { display: grid; border-bottom: 1px solid var(--rule); }
+details.ep { border-top: 1px solid var(--rule); }
+details.ep summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: auto 1fr auto; gap: .9rem; align-items: center; padding-block: .85rem; min-height: 60px; }
+details.ep summary::-webkit-details-marker { display: none; }
+details.ep summary:hover b { color: var(--link); }
+.code { font: 800 .95rem var(--f-head); color: var(--on-blue); background: var(--blue); padding: .4rem .5rem; min-width: 3.4rem; text-align: center; font-variant-numeric: tabular-nums; }
+.ep-t { display: grid; gap: .1rem; min-width: 0; }
+.ep-t b { font: 800 1.12rem/1.2 var(--f-head); }
+.ep-t span { font: 400 .82rem var(--f-head); color: var(--ink-3); }
+.chev { width: 22px; height: 22px; color: var(--ink-3); transition: transform .2s; }
+details[open] .chev { transform: rotate(180deg); }
+.ep-body { display: grid; gap: 1rem; padding: .2rem 0 1.4rem; }
+@media (min-width: 640px) { .ep-body { padding-left: 4.3rem; } }
+.plot { display: grid; gap: .7rem; }
+.plot p { display: grid; grid-template-columns: 1.6rem 1fr; gap: .5rem; }
+.plot p b { font: 800 1rem/1.65 var(--f-head); color: var(--red); }
+.ep-body h4 { font: 600 .82rem var(--f-head); color: var(--ink-3); margin-bottom: .35rem; }
+
+/* Lexikon */
+.lex-filter, .seasonpick { display: flex; flex-wrap: wrap; gap: .4rem; }
+.seg { font: 600 .9rem var(--f-head); min-height: 44px; padding: .45rem .9rem; border: 1px solid var(--rule); background: var(--paper); color: var(--ink-2); cursor: pointer; border-radius: 3px; touch-action: manipulation; }
+.seg[aria-pressed="true"] { background: var(--blue); border-color: var(--blue); color: var(--on-blue); }
+.entry { display: grid; gap: 1.1rem; padding-block: 1.5rem; border-top: 2px solid var(--ink); }
+.entry-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem .9rem; }
+.entry-head h3 { font-size: 1.55rem; }
+.when { font: 400 .86rem var(--f-head); color: var(--ink-3); }
+.entry-body { display: grid; gap: 1.2rem; }
+@media (min-width: 760px) { .entry-body { grid-template-columns: 220px 1fr; gap: 2rem; } }
+.entry-imgs { display: grid; gap: .8rem; grid-template-columns: 1fr 1fr; align-content: start; }
+@media (min-width: 760px) { .entry-imgs { grid-template-columns: 1fr; } }
+dl.kv { margin: 0; display: grid; }
+dl.kv > div { display: grid; gap: .2rem; padding-block: .6rem; border-top: 1px solid var(--rule); }
+dl.kv > div:first-child { border-top: 0; padding-top: 0; }
+@media (min-width: 640px) { dl.kv > div { grid-template-columns: 10rem 1fr; gap: 1rem; } }
+dl.kv dt { font: 600 .84rem var(--f-head); color: var(--ink-3); }
+dl.kv dd { margin: 0; }
+.places { display: grid; gap: 0 2.5rem; }
+@media (min-width: 860px) { .places { grid-template-columns: 1fr 1fr; } }
+.place { display: grid; gap: .7rem; padding-block: 1.25rem; border-top: 1px solid var(--rule); align-content: start; }
+.place .pi { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; }
+.place .pi.one { grid-template-columns: 1fr; }
+.place dl.kv > div { grid-template-columns: 1fr; gap: .15rem; }
+
+/* Ranking */
+.rank { list-style: none; padding: 0; display: grid; }
+.rank > li { display: grid; grid-template-columns: 3.2rem 96px 1fr; gap: 1rem; padding-block: 1.1rem; border-top: 1px solid var(--rule); align-items: start; }
+.rank .pos { font: 800 2.6rem/1 var(--f-head); color: var(--link); font-variant-numeric: tabular-nums; }
+.rank .thumb { width: 96px; aspect-ratio: 1; overflow: hidden; }
+.rank .thumb img { object-position: top; }
+.rank .rb { display: grid; gap: .35rem; min-width: 0; }
+.rank .rh { display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem .7rem; }
+.rank h3 { font-size: 1.3rem; }
+.bar { height: 8px; background: var(--bar-bg); }
+.bar i { display: block; height: 100%; background: var(--red); }
+.score { font: 600 .82rem var(--f-head); color: var(--ink-2); font-variant-numeric: tabular-nums; }
+@media (max-width: 560px) { .rank > li { grid-template-columns: 2.4rem 72px; gap: .7rem; } .rank .thumb { width: 72px; } .rank .pos { font-size: 2rem; } .rank .rb { grid-column: 1 / -1; } }
+.honors { display: grid; gap: 0 2rem; }
+@media (min-width: 760px) { .honors { grid-template-columns: 1fr 1fr; } }
+.honors > div { padding-block: .7rem; border-top: 1px solid var(--rule); }
+.honors b { font-family: var(--f-head); }
+
+/* Duell */
+.duel-pick { display: grid; gap: .8rem; }
+@media (min-width: 700px) { .duel-pick { grid-template-columns: 1fr auto 1fr; align-items: end; } }
+.duel-pick label { display: grid; gap: .3rem; font: 600 .86rem var(--f-head); color: var(--ink-2); }
+select { font: 400 1rem var(--f-head); min-height: 48px; padding: .5rem .7rem; border: 1px solid var(--rule); background: var(--paper); color: var(--ink); width: 100%; border-radius: 3px; }
+.vs { font: 800 1.1rem var(--f-head); color: var(--red); text-align: center; padding-bottom: .7rem; }
+.duel-faces { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.duel-faces h3 { font-size: 1.05rem; margin-top: .5rem; }
+.stats { display: grid; gap: .45rem; }
+.stat-row { display: grid; grid-template-columns: 1fr 7rem 1fr; gap: .5rem; align-items: center; }
+.stat-row .lbl { text-align: center; font: 600 .8rem var(--f-head); color: var(--ink-2); }
+.half { display: flex; align-items: center; gap: .35rem; }
+.half.l { flex-direction: row-reverse; }
+.sbar { flex: 1; height: 10px; background: var(--bar-bg); display: flex; }
+.l .sbar { justify-content: flex-end; }
+.sbar i { display: block; height: 100%; }
+.l .sbar i { background: var(--link); }
+.r .sbar i { background: var(--red); }
+.half .n { font: 600 .8rem var(--f-head); color: var(--ink-3); font-variant-numeric: tabular-nums; width: 1.2rem; text-align: center; }
+.verdict { display: grid; gap: .45rem; padding: 1rem 1.1rem; background: var(--paper-2); border-left: 4px solid var(--gold); }
+.verdict .w { font: 800 1.35rem/1.2 var(--f-head); }
+
+/* Tracker */
+.tbl-wrap { overflow-x: auto; }
+table.track { width: 100%; border-collapse: collapse; font-size: .95rem; }
+table.track th, table.track td { text-align: left; vertical-align: top; padding: .75rem .7rem; border-top: 1px solid var(--rule); }
+table.track thead th { font: 600 .82rem var(--f-head); color: var(--ink-3); border-top: 2px solid var(--ink); }
+table.track tbody th { font-family: var(--f-head); font-weight: 800; white-space: nowrap; }
+table.track .who { display: flex; align-items: center; gap: .65rem; }
+table.track .who .thumb { width: 52px; aspect-ratio: 1; overflow: hidden; flex: none; }
+table.track .chg { display: block; font: 600 .7rem var(--f-head); color: var(--red); padding-left: 3.3rem; margin-top: .15rem; }
+@media (max-width: 720px) {
+  table.track thead { display: none; }
+  table.track, table.track tbody, table.track tr, table.track th, table.track td { display: block; width: 100%; }
+  table.track tr { border-top: 1px solid var(--rule); padding-block: .7rem; }
+  table.track th, table.track td { border: 0; padding: .2rem 0; }
+  table.track td::before { content: attr(data-l); display: block; font: 600 .74rem var(--f-head); color: var(--ink-3); }
+}
+
+/* Zeitleiste */
+.tl { list-style: none; padding: 0; display: grid; }
+.tl > li { display: grid; gap: 1rem; padding-block: 1.5rem; border-top: 1px solid var(--rule); }
+@media (min-width: 760px) { .tl > li { grid-template-columns: 9rem 1fr 260px; gap: 2rem; } }
+.tl .yr { display: grid; gap: .35rem; align-content: start; justify-items: start; }
+.tl .yr b { font: 800 1.7rem/1 var(--f-head); color: var(--link); }
+.tl .yr span { font: 400 .85rem var(--f-head); color: var(--ink-3); }
+.tl > li.divider { display: block; border-top: 2px solid var(--red); padding-block: .5rem 0; font: 800 .9rem var(--f-head); color: var(--red); }
+.tl .portrait { max-width: 200px; }
+
+/* Quellen */
+.src { display: grid; gap: 1.5rem 3rem; }
+@media (min-width: 860px) { .src { grid-template-columns: 1fr 1fr; } }
+.src ul { padding-left: 1.1rem; display: grid; gap: .35rem; font-size: .96rem; overflow-wrap: anywhere; }
+footer { background: var(--paper-2); border-top: 3px solid var(--blue); padding-block: 1.5rem 2.5rem; font: 400 .86rem/1.5 var(--f-head); color: var(--ink-2); }
+</style>
+
+<header>
+  <div class="wrap masthead">
+    <a class="name" href="#start">Superman <span>&amp;</span> Lois</a>
+    <span class="sub">Staffel 5 bis 7 – die Fortsetzung, die nie gedreht wurde</span>
+  </div>
+  <nav class="navbar" id="navbar" aria-label="Bereiche">
+    <div class="wrap nav-in">
+      <button class="nav-toggle" type="button" id="nav-toggle" aria-expanded="false" aria-controls="nav-list">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        Menü <span class="cur" id="nav-cur">· Start</span>
+      </button>
+      <ul class="nav-list" id="nav-list">
+        <li><a href="#start">Start</a></li>
+        <li><a href="#stand">Wo wir stehen</a></li>
+        <li><a href="#s5">Staffel 5</a></li>
+        <li><a href="#s6">Staffel 6</a></li>
+        <li><a href="#s7">Staffel 7</a></li>
+        <li><a href="#lexikon">Bösewicht-Lexikon</a></li>
+        <li><a href="#ranking">Power-Ranking</a></li>
+        <li><a href="#duell">Wer gewinnt?</a></li>
+        <li><a href="#tracker">Figuren-Tracker</a></li>
+        <li><a href="#zeitleiste">Zeitleiste</a></li>
+        <li><a href="#quellen">Quellen</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main class="wrap" id="main" tabindex="-1">
+
+<!-- START -->
+<div class="view" data-view="start">
+  <section class="opener">
+    <figure><div class="cine" id="hero-img"></div><span id="hero-cap"></span></figure>
+    <p class="kicker">Ein privates Fanprojekt</p>
+    <h1>Was wäre, wenn sie weitergeflogen wären?</h1>
+    <p class="lead prose">Am Ende von 4x10 fliegen Superman, Jonathan, Jordan und Steel gemeinsam über Smallville. Dann springt die Serie 32 Jahre nach vorn. Diese Seite streicht den großen Zeitsprung und erzählt die drei Staffeln, die Todd Helbing und Brent Fletcher noch machen wollten.</p>
+    <div class="btns"><a class="btn primary" href="#s5">Zu Staffel 5</a><a class="btn" href="#stand">Erst den Kanon-Stand ansehen</a></div>
+  </section>
+
+  <div class="cols">
+    <div>
+      <section class="flow">
+        <h2 class="rule-top">Warum war nach Staffel 4 Schluss?</h2>
+        <p class="prose">Die Showrunner hatten mit mindestens sieben Staffeln gerechnet, Elizabeth Tulloch sprach sogar von „sieben oder acht“, die dem Cast in Aussicht gestellt worden waren. Am Ende kamen mehrere Entscheidungen zusammen.</p>
+        <ul class="dated">
+          <li><span class="d">2022</span><span>Der Medienkonzern Nexstar übernimmt die Mehrheit an The CW. Der Sender setzt danach auf billigere Programme und weniger teure Eigenproduktionen.</span></li>
+          <li><span class="d">Juni 2023</span><span>Staffel 4 wird bestellt, aber nur mit 10 statt 13–15 Folgen. Sieben Darsteller verlieren ihren festen Hauptrollen-Status, die Kent-Farm-Kulisse wird abgebaut.</span></li>
+          <li><span class="d">Nov. 2023</span><span>Offiziell: Staffel 4 ist die letzte.</span></li>
+          <li><span class="d">Feb. 2024</span><span>CW-Chef Brad Schwartz sagt, die Entscheidung kam von Warner Bros. – wegen James Gunns Kinofilm „Superman“ (2025) im neuen DC-Universum.</span></li>
+        </ul>
+        <blockquote>„They don't want a competing Superman product in the marketplace.“<cite>Brad Schwartz, The CW, im Gespräch mit TheWrap</cite></blockquote>
+        <p class="prose muted">Tulloch nannte es eine Art dreifachen Schlag – Nexstar, die neue Führung bei Warner Bros. Discovery und der Neustart von DC Studios – und bat die Fans, nicht allein James Gunn die Schuld zu geben.</p>
+      </section>
+
+      <section>
+        <h2 class="rule-top">Die drei Staffeln</h2>
+        <ul class="seasons" id="season-list"></ul>
+      </section>
+
+      <section>
+        <h2 class="rule-top">Was wir beim Prüfen korrigiert haben</h2>
+        <p class="prose muted">Vor dem Schreiben haben wir den Stand aus der Aufgabenstellung gegen Wikipedia, Interviews und das Transkript von 4x10 geprüft. Links die ursprüngliche Annahme, rechts, was wirklich gilt.</p>
+        <div class="fixes" id="fixes"></div>
+      </section>
+    </div>
+
+    <aside>
+      <div class="box">
+        <h3>Unser Format</h3>
+        <p><b class="sans">3 Staffeln, je 10 Folgen, 42–45 Minuten.</b> Die Finals von Staffel 5 und 6 laufen etwa 61 Minuten, das Serienfinale ist eine Doppelfolge mit 84 Minuten.</p>
+        <p class="small muted">So viel hätte The CW nach dem Sparkurs realistisch bezahlt, und Staffel 4 hat gezeigt, dass zehn dichte Folgen funktionieren. Das Geld fließt in drei große Gegner: Brainiac, Zod und Darkseid. Zusammen sind es die sieben Staffeln, die sich die Macher gewünscht hatten.</p>
+        <p class="small muted">5x01 ist die 54. Folge der Serie, das Serienfinale die 83.</p>
+      </div>
+      <div class="box red">
+        <h3>So liest du diese Seite</h3>
+        <div class="legend">
+          <div><span data-tag="kanon"></span><p class="small">Ist in Staffel 1–4 so passiert. Geprüft an Episoden-Zusammenfassungen und dem Transkript des Finales.</p></div>
+          <div><span data-tag="geplant"></span><p class="small">Von Showrunnern oder Darstellern als Plan oder Wunsch genannt: Brainiac, ein Weg zu Darkseid, Tal-Rhos Rückkehr, Lois mit Superkräften.</p></div>
+          <div><span data-tag="fan"></span><p class="small">Unsere Erfindung für Staffel 5–7. Nie gedreht.</p></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- STAND -->
+<div class="view" data-view="stand" hidden>
+  <section class="flow">
+    <p class="kicker">Kanon nach Staffel 4</p>
+    <h1>Wo wir stehen</h1>
+    <p class="lead prose">Das Finale „It Went by So Fast“ (4x10) springt zweimal. Der erste Sprung, ein Jahr nach Lex' Niederlage zur Hochzeit von Lana und John Henry, gilt. Die Rückblende über 32 Jahre – Lois' Krebs kehrt zurück, beide sterben, Clark adoptiert Krypto – ist für diese Fortsetzung gestrichen.</p>
+    <div class="tags"><span data-tag="kanon"></span></div>
+  </section>
+
+  <section>
+    <h2 class="rule-top">Die Hauptfiguren</h2>
+    <div class="register" id="canon-cards"></div>
+  </section>
+
+  <div class="cols">
+    <div>
+      <section>
+        <h2 class="rule-top">Weitere Figuren</h2>
+        <ul class="people" id="canon-others"></ul>
+      </section>
+      <section>
+        <h2 class="rule-top">Schauplätze</h2>
+        <div class="locs" id="locs"></div>
+      </section>
+    </div>
+    <aside>
+      <div class="box">
+        <h3>Regeln dieser Welt</h3>
+        <ul class="rules small">
+          <li>Die Serie spielt auf einer eigenen Erde, getrennt vom Arrowverse. Das wurde im Staffel-2-Finale klar.</li>
+          <li>Superman ist dort der einzige Held mit Superkräften. Ein Batman ohne Kräfte widerspricht dem nicht.</li>
+          <li>Halb-Kryptonier wie die Zwillinge reagieren schwächer auf Kryptonit (Staffel 3).</li>
+          <li>Unter roten Lampen verliert Clark seine Kräfte (4x06).</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>Die Darsteller</h3>
+        <div class="cast" id="cast"></div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- STAFFELN -->
+<div class="view" data-view="s5" hidden></div>
+<div class="view" data-view="s6" hidden></div>
+<div class="view" data-view="s7" hidden></div>
+
+<!-- LEXIKON -->
+<div class="view" data-view="lexikon" hidden>
+  <section class="flow">
+    <p class="kicker">Comic-Herkunft, Kräfte, Marvel-Vergleich</p>
+    <h1>Bösewicht-Lexikon</h1>
+    <p class="lead prose">Jeder Gegner aus Staffel 1 bis 7 mit Comic-Erstauftritt und der Frage, warum er Superman gefährlich wird. Neben jedem Eintrag steht die Comic-Version, darunter die Serie oder unsere Fan-Art.</p>
+    <p class="spoil-note"><b>Spoiler-Warnung:</b> Die Einträge zu Staffel 5–7 verraten einzelne Wendungen. Der Filter „Kanon (S1–4)“ zeigt nur Bekanntes.</p>
+    <div class="lex-filter" role="group" aria-label="Filter">
+      <button class="seg" type="button" data-f="all" aria-pressed="true">Alle</button>
+      <button class="seg" type="button" data-f="kanon" aria-pressed="false">Kanon (S1–4)</button>
+      <button class="seg" type="button" data-f="neu" aria-pressed="false">Neu in S5–7</button>
+    </div>
+  </section>
+  <section id="lex"></section>
+  <section>
+    <h2 class="rule-top">Orte, Technik, Begriffe</h2>
+    <div class="places" id="places"></div>
+  </section>
+</div>
+
+<!-- RANKING -->
+<div class="view" data-view="ranking" hidden>
+  <section class="flow">
+    <p class="kicker">Hauptbösewichte Staffel 1–7</p>
+    <h1>Power-Ranking</h1>
+    <p class="lead prose">Sortiert nach Gefahr für Superman – nicht nur nach roher Kraft, sondern danach, wie nah jeder Gegner daran war, ihn zu brechen. Die Punkte sind unsere Einschätzung.</p>
+    <p class="spoil-note"><b>Spoiler-Warnung:</b> Die Begründungen zu Darkseid, Brainiac und Zod verraten Wendungen aus Staffel 5–7.</p>
+  </section>
+  <section><ol class="rank" id="rank"></ol></section>
+  <section>
+    <h2 class="rule-top">Ehrennennungen</h2>
+    <div class="honors" id="honors"></div>
+  </section>
+</div>
+
+<!-- DUELL -->
+<div class="view" data-view="duell" hidden>
+  <section class="flow">
+    <p class="kicker">Fan-Rechner</p>
+    <h1>Wer würde gewinnen?</h1>
+    <p class="lead prose">Wähle zwei Kämpfer. Der Rechner vergleicht sechs Werte von 0 bis 10 und beachtet Sonderregeln: Kryptonit gegen Kryptonier, Radion gegen Neue Götter, Doomsdays Rückkehr nach dem Tod.</p>
+  </section>
+  <section>
+    <div class="duel-pick">
+      <label for="fa">Kämpfer A<select id="fa"></select></label>
+      <div class="vs" aria-hidden="true">gegen</div>
+      <label for="fb">Kämpfer B<select id="fb"></select></label>
+    </div>
+    <div id="duel" class="flow" aria-live="polite"></div>
+  </section>
+</div>
+
+<!-- TRACKER -->
+<div class="view" data-view="tracker" hidden>
+  <section class="flow">
+    <p class="kicker">Beziehung, Kräfte, Wohnort</p>
+    <h1>Figuren-Tracker</h1>
+    <p class="lead prose">Der Stand jeder Hauptfigur am Ende jeder Staffel. Staffel 1–4 ist Kanon, Staffel 5–7 unsere Fortsetzung. „Geändert“ heißt: anders als am Ende der Staffel davor.</p>
+    <div class="seasonpick" role="group" aria-label="Staffel wählen" id="seasonpick"></div>
+    <div id="track-label"></div>
+  </section>
+  <section class="tbl-wrap"><table class="track" id="track"></table></section>
+</div>
+
+<!-- ZEITLEISTE -->
+<div class="view" data-view="zeitleiste" hidden>
+  <section class="flow">
+    <p class="kicker">2021 bis zum Serienende</p>
+    <h1>Zeitleiste Staffel 1–7</h1>
+    <p class="spoil-note"><b>Spoiler-Warnung:</b> Ab Staffel 5 nennt die Zeitleiste die wichtigsten Wendungen der Fortsetzung.</p>
+  </section>
+  <section><ol class="tl" id="tl"></ol></section>
+</div>
+
+<!-- QUELLEN -->
+<div class="view" data-view="quellen" hidden>
+  <section class="flow">
+    <p class="kicker">Recherche</p>
+    <h1>Quellen</h1>
+    <p class="lead prose">Kanon-Angaben stammen aus den verlinkten Episoden-Zusammenfassungen, Interviews und dem Transkript von 4x10. Unter jedem Bild steht seine Quelle. Alle Rechte an Figuren, Szenenfotos und Comic-Abbildungen liegen bei DC Comics, Warner Bros. Television und The CW. Diese Seite ist ein privates, nicht-kommerzielles Fanprojekt.</p>
+  </section>
+  <section class="src" id="sources"></section>
+</div>
+
+</main>
+
+<footer>
+  <div class="wrap">Superman &amp; Lois · Staffel 5–7 ist eine Fan-Fiktion und steht in keiner Verbindung zu DC, Warner Bros. oder The CW. Bilder mit dem Hinweis „Fan-Art / KI-generiert“ zeigen Szenen, die es nie gab.</div>
+</footer>
+
+<script>
+/*__DATA__*/
+</script>
+<script>
+(function () {
+  "use strict";
+  const SEASONS = { s5: S5, s6: S6, s7: S7 };
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const ICON = {
+    kanon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>',
+    geplant: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4h6M9 4a2 2 0 0 0-2 2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-1a2 2 0 0 0-2-2"/><path d="M9 13h6M9 17h4"/></svg>',
+    fan: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>',
+    chev: '<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>'
+  };
+  const LABEL = { kanon: "Kanon", geplant: "Von den Machern geplant", fan: "Fan-Fiktion" };
+  const tag = k => `<span class="tag tag-${k}">${ICON[k]}${LABEL[k]}</span>`;
+  const credit = (slug, el) => {
+    const m = IMG[slug];
+    if (!m) return "";
+    const t = el || "figcaption", cls = t === "span" ? ' class="cr"' : "";
+    if (m.ai) return `<${t}${cls}><span class="ai">Fan-Art / KI-generiert</span> · diese Szene gibt es nicht</${t}>`;
+    const who = m.credit.includes("Arrowverse") ? "© The CW / Warner Bros. TV · Arrowverse Wiki" : m.credit.includes("DC Database") ? "© DC Comics · DC Database" : m.credit;
+    return `<${t}${cls}>${esc(who)}${m.url ? ` · <a href="${esc(m.url)}" target="_blank" rel="noopener">Quelle</a>` : ""}</${t}>`;
+  };
+  const img = (slug, alt, eager) => `<img src="img/${slug}.webp" alt="${esc(alt)}"${eager ? "" : ' loading="lazy"'} decoding="async">`;
+  const fig = (slug, alt, ratio, eager) => `<figure><div class="${ratio}">${img(slug, alt, eager)}</div>${credit(slug)}</figure>`;
+
+  document.querySelectorAll("[data-tag]").forEach(el => { el.outerHTML = tag(el.dataset.tag); });
+
+  // Navigation mit Handy-Menü
+  const navbar = $("navbar"), toggle = $("nav-toggle");
+  toggle.addEventListener("click", () => {
+    const open = !navbar.classList.contains("open");
+    navbar.classList.toggle("open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+  });
+
+  // Start
+  $("hero-img").innerHTML = img("superfamily", "Superman, Jonathan, Jordan und Steel fliegen gemeinsam über den Wolken (4x10)", true);
+  $("hero-cap").outerHTML = credit("superfamily");
+  $("season-list").innerHTML = [S5, S6, S7].map(s => `
+    <li><a href="#${s.slug}">
+      <figure><div class="cine">${img(s.img, "Szenenbild zu Staffel " + s.id)}</div>${credit(s.img, "span")}</figure>
+      <div>
+        <span class="sn">Staffel ${s.id} · Hauptbösewicht: ${esc(s.villain.name)}</span>
+        <h3>${esc(s.title)}</h3>
+        <p class="small muted">${esc(s.theme.split(". ")[0])}.</p>
+      </div>
+    </a></li>`).join("");
+  $("fixes").innerHTML = FIXES.map(f => `
+    <div class="fix"><p class="claim"><b>Annahme</b><s>${esc(f.claim)}</s></p><p>${esc(f.truth)}</p></div>`).join("");
+
+  // Wo wir stehen
+  $("canon-cards").innerHTML = CANON.map(c => `
+    <article class="person">
+      <div class="head">
+        <div><div class="thumb">${img(c.img, c.name)}</div></div>
+        <div><h3>${esc(c.name)}</h3><span class="actor">gespielt von ${esc(c.actor)}</span></div>
+      </div>
+      <p>${esc(c.status)}</p>
+      <p class="marvel"><b>Für Marvel-Fans</b>${esc(c.marvel)}</p>
+      ${credit(c.img, "span")}
+    </article>`).join("");
+  $("canon-others").innerHTML = CANON_OTHERS.map(o => `
+    <li>
+      <div><div class="thumb">${img(o.img, o.name)}</div></div>
+      <div><h3>${esc(o.name)}</h3><p>${esc(o.text)}</p>${o.m ? `<p class="m"><b>Marvel:</b> ${esc(o.m)}</p>` : ""}${credit(o.img, "span")}</div>
+    </li>`).join("");
+  const LOCS = [["smallville", "Smallville, Kansas", "Lana ist hier Bürgermeisterin."], ["kentfarm", "Die Kent-Farm", "Seit 4x07 weiß die ganze Welt, wer hier wohnt."], ["fortress", "Die Festung der Einsamkeit", "Seit Staffel 2 im Ozean, mit den KIs von Lara und Clark."], ["stryker", "Stryker's Prison", "Lex sitzt hier lebenslang, in Bruno Mannheims Block."]];
+  $("locs").innerHTML = LOCS.map(([s, n, t]) => `
+    <figure><div class="wide">${img(s, n)}</div><b>${esc(n)}</b><span class="small muted">${esc(t)}</span>${credit(s)}</figure>`).join("");
+  const CAST = [["a_hoechlin", "Tyler Hoechlin"], ["a_tulloch", "Elizabeth Tulloch"], ["a_garfin", "Alex Garfin"], ["a_chriqui", "Emmanuelle Chriqui"], ["a_cudlitz", "Michael Cudlitz"], ["a_cavanagh", "Tom Cavanagh"]];
+  $("cast").innerHTML = CAST.map(([s, n]) => `
+    <figure><div class="portrait">${img(s, n)}</div><b>${esc(n)}</b>${credit(s)}</figure>`).join("");
+
+  // Staffelseiten
+  function heartSvg(pct) {
+    const w = 600, mid = 23, x = Math.max(60, pct / 100 * w - 70);
+    const d = `M0 ${mid} L${x - 30} ${mid} L${x - 22} ${mid - 5} L${x - 14} ${mid} L${x - 6} ${mid} L${x} ${mid - 17} L${x + 6} ${mid + 14} L${x + 12} ${mid} L${x + 24} ${mid} L${x + 32} ${mid - 6} L${x + 42} ${mid} L${w} ${mid}`;
+    return `<svg viewBox="0 0 ${w} 46" preserveAspectRatio="none" aria-hidden="true"><path d="${d}" fill="none" stroke="currentColor" stroke-opacity=".55" stroke-width="2" vector-effect="non-scaling-stroke"/></svg>`;
+  }
+  const epCode = (s, e) => `${s.id}x${String(e.n).padStart(2, "0")}`;
+  function epHtml(s, e) {
+    return `<details class="ep" id="${s.slug}e${e.n}">
+      <summary>
+        <span class="code">${epCode(s, e)}</span>
+        <span class="ep-t"><b>${esc(e.de)}</b><span>„${esc(e.ot)}“ · Folge ${e.all} der Serie · ${e.min} Min.</span></span>
+        ${ICON.chev}
+      </summary>
+      <div class="ep-body">
+        <div class="tags">${e.labels.map(tag).join("")}</div>
+        <div class="plot">
+          <p><b>A</b><span>${esc(e.a)}</span></p>
+          <p><b>B</b><span>${esc(e.b)}</span></p>
+          <p><b>C</b><span>${esc(e.c)}</span></p>
+        </div>
+        <div><h4>Wichtigste Momente und Kämpfe</h4><ul class="dots">${e.moments.map(m => `<li>${esc(m)}</li>`).join("")}</ul></div>
+        <div><h4>Schlussbild</h4><p class="endshot">${esc(e.end)}</p></div>
+      </div>
+    </details>`;
+  }
+  const personList = (list, cls) => `<ul class="people${cls ? " " + cls : ""}">${list.map(v => `
+    <li><div><div class="thumb">${img(v.img, v.name)}</div></div><div><h4>${esc(v.name)}</h4><p>${esc(v.text)}</p>${credit(v.img, "span")}</div></li>`).join("")}</ul>`;
+  function seasonHtml(s) {
+    const total = s.episodes.reduce((a, e) => a + e.min, 0);
+    return `
+    <section class="s-head">
+      <figure><div class="cine">${img(s.img, "Szenenbild zu Staffel " + s.id, true)}</div>${credit(s.img)}</figure>
+      <div class="s-title">
+        <span class="big" aria-hidden="true">${s.id}</span>
+        <h1>Staffel ${s.id}: ${esc(s.title)}</h1>
+        <span class="ot">Originaltitel „${esc(s.ot)}“ · ${esc(s.air)}</span>
+      </div>
+      <div class="tags">${tag("fan")}${tag("geplant")}</div>
+    </section>
+
+    <div class="cols">
+      <div>
+        <section class="flow">
+          <h2 class="rule-top">Worum es geht</h2>
+          <p class="lead">${esc(s.theme)}</p>
+          <p>${esc(s.start)}</p>
+        </section>
+
+        <section>
+          <h2 class="rule-top">Hauptbösewicht: ${esc(s.villain.name)}</h2>
+          <div class="villain">
+            ${fig(s.villain.img, s.villain.name, "portrait")}
+            <div class="flow">
+              <div class="tags">${tag(s.villain.label)}</div>
+              <p>${esc(s.villain.text)}</p>
+              <p class="small"><a href="#lexikon">Mehr im Bösewicht-Lexikon</a></p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="ep-head"><h2>Episodenguide</h2><button class="btn" type="button" data-toggle-all="${s.slug}">Alle aufklappen</button></div>
+          <p class="small muted">Jede Folge ist zugeklappt. Tippe auf eine Folge, um ihre Handlung zu lesen – so verrätst du dir nichts von den späteren Folgen.</p>
+          <div class="eps" id="eps-${s.slug}">${s.episodes.map(e => epHtml(s, e)).join("")}</div>
+        </section>
+
+        <details class="spoilers" id="rueckblick-${s.slug}">
+          <summary>
+            <span class="sp-icon" aria-hidden="true">!</span>
+            <span class="sp-t"><b>Staffel-Rückblick mit Spoilern</b><span>Nebenschurken, Gäste, Clarks Herz, Figurenbögen, Beziehungen, Finale und Cliffhanger. Erst öffnen, wenn du alle ${s.episodes.length} Folgen gelesen hast.</span></span>
+            ${ICON.chev}
+          </summary>
+          <div class="sp-body">
+            <section>
+              <h2 class="rule-top">Nebenschurken</h2>
+              ${personList(s.side)}
+            </section>
+
+            <section>
+              <h2 class="rule-top">Gäste und Rückkehrer</h2>
+              ${personList(s.guests)}
+            </section>
+
+            <section class="flow">
+              <h2 class="rule-top">${esc(s.feature.title)}</h2>
+              ${fig(s.feature.img, s.feature.title, "cine")}
+              <div class="tags">${tag(s.feature.label)}</div>
+              <p>${esc(s.feature.text)}</p>
+            </section>
+
+            <section class="heart flow">
+              <h2 class="rule-top">Clarks Herz und Kräfte</h2>
+              <div class="meter" role="img" aria-label="Clarks Kraft am Ende von Staffel ${s.id}: etwa ${s.heart.pct} Prozent">
+                <div class="fill" style="width:${s.heart.pct}%"></div>${heartSvg(s.heart.pct)}<span class="val">${s.heart.pct} %</span>
+              </div>
+              <div class="scale" aria-hidden="true"><span>0 %</span><span>Staffel 1–3: 100 %</span></div>
+              <p>${esc(s.heart.text)}</p>
+            </section>
+
+            <section>
+              <h2 class="rule-top">Figurenbögen</h2>
+              <dl class="arcs">${s.arcs.map(a => `<div><dt>${esc(a.who)}</dt><dd>${esc(a.text)}</dd></div>`).join("")}</dl>
+            </section>
+
+            <section class="flow">
+              <h2 class="rule-top">Beziehungen</h2>
+              <ul class="dots">${s.rel.map(r => `<li>${esc(r)}</li>`).join("")}</ul>
+            </section>
+
+            <section class="flow">
+              <h2 class="rule-top">Finale und Cliffhanger</h2>
+              <p>${esc(s.finale)}</p>
+              <p class="endshot">${esc(s.cliff)}</p>
+            </section>
+          </div>
+        </details>
+
+        <nav class="season-nav" aria-label="Staffeln">
+          ${s.id > 5 ? `<a class="btn" href="#s${s.id - 1}">Staffel ${s.id - 1}</a>` : `<a class="btn" href="#stand">Wo wir stehen</a>`}
+          ${s.id < 7 ? `<a class="btn primary" href="#s${s.id + 1}">Weiter zu Staffel ${s.id + 1}</a>` : `<a class="btn primary" href="#lexikon">Zum Bösewicht-Lexikon</a>`}
+        </nav>
+      </div>
+
+      <aside>
+        <div class="box">
+          <h3>Auf einen Blick</h3>
+          <dl class="facts">
+            <div><dt>Umfang</dt><dd>${esc(s.eps)}</dd></div>
+            <div><dt>Gesamtlaufzeit</dt><dd>${Math.floor(total / 60)} Std. ${total % 60} Min.</dd></div>
+            <div><dt>Hauptbösewicht</dt><dd>${esc(s.villain.name)}</dd></div>
+          </dl>
+        </div>
+        <div class="box">
+          <h3>Folgen</h3>
+          <ol class="ep-index">${s.episodes.map(e => `<li><a href="#${s.slug}e${e.n}"><span class="c">${epCode(s, e)}</span><span>${esc(e.de)}</span></a></li>`).join("")}</ol>
+        </div>
+        <div class="box red">
+          <h3>Ohne Spoiler lesen</h3>
+          <p class="small">Erst „Worum es geht“ und den Hauptbösewicht, dann die Folgen der Reihe nach. Der Staffel-Rückblick unter dem Episodenguide bleibt zu, bis du ihn öffnest.</p>
+        </div>
+      </aside>
+    </div>`;
+  }
+  Object.values(SEASONS).forEach(s => { document.querySelector(`[data-view="${s.slug}"]`).innerHTML = seasonHtml(s); });
+  document.addEventListener("click", ev => {
+    const b = ev.target.closest("[data-toggle-all]");
+    if (!b) return;
+    const open = b.textContent.trim() === "Alle aufklappen";
+    document.querySelectorAll(`#eps-${b.dataset.toggleAll} details`).forEach(d => { d.open = open; });
+    b.textContent = open ? "Alle zuklappen" : "Alle aufklappen";
+  });
+
+  // Lexikon
+  function renderLex(f) {
+    $("lex").innerHTML = VILLAINS.filter(v => f === "all" || (f === "kanon" ? v.label === "kanon" : v.label !== "kanon")).map(v => `
+      <article class="entry" id="lex-${v.slug}">
+        <div class="entry-head"><h3>${esc(v.name)}</h3><span class="when">${esc(v.season)}</span>${tag(v.label)}</div>
+        <div class="entry-body">
+          <div class="entry-imgs">${fig(v.img, v.name, "portrait")}${v.img2 && v.img2 !== v.img ? fig(v.img2, v.name + ", zweites Bild", "wide") : ""}</div>
+          <dl class="kv">
+            <div><dt>Comic-Herkunft</dt><dd>${esc(v.first)}</dd></div>
+            <div><dt>Kräfte</dt><dd>${esc(v.powers)}</dd></div>
+            <div><dt>Für Marvel-Fans</dt><dd>${esc(v.marvel)}</dd></div>
+            <div><dt>Warum gefährlich</dt><dd>${esc(v.danger)}</dd></div>
+          </dl>
+        </div>
+      </article>`).join("");
+  }
+  renderLex("all");
+  document.querySelectorAll(".lex-filter .seg").forEach(c => c.addEventListener("click", () => {
+    document.querySelectorAll(".lex-filter .seg").forEach(x => x.setAttribute("aria-pressed", x === c ? "true" : "false"));
+    renderLex(c.dataset.f);
+  }));
+  $("places").innerHTML = PLACES.map(p => `
+    <article class="place">
+      <div class="pi${p.img2 ? "" : " one"}">${fig(p.img, p.name, "wide")}${p.img2 ? fig(p.img2, p.name + ", zweites Bild", "wide") : ""}</div>
+      <h3>${esc(p.name)}</h3>
+      <dl class="kv">
+        <div><dt>Comic-Herkunft</dt><dd>${esc(p.first)}</dd></div>
+        <div><dt>Was ist das?</dt><dd>${esc(p.text)}</dd></div>
+        <div><dt>Für Marvel-Fans</dt><dd>${esc(p.marvel)}</dd></div>
+      </dl>
+    </article>`).join("");
+
+  // Ranking
+  const vImg = slug => (VILLAINS.find(v => v.slug === slug) || {}).img;
+  $("rank").innerHTML = RANKING.map(r => `
+    <li>
+      <span class="pos">${r.r}</span>
+      <div class="thumb">${img(vImg(r.slug), r.name)}</div>
+      <div class="rb">
+        <div class="rh"><h3>${esc(r.name)}</h3><span class="when">${esc(r.season)}</span>${tag(r.label)}</div>
+        <div class="bar" role="img" aria-label="Gefahr ${r.score} von 100"><i style="width:${r.score}%"></i></div>
+        <span class="score">Gefahr für Superman: ${r.score} von 100</span>
+        <p>${esc(r.why)}</p>
+        ${credit(vImg(r.slug), "span")}
+      </div>
+    </li>`).join("");
+  $("honors").innerHTML = HONORS.map(h => `<div><b>${esc(h.name)}</b> <span class="when">${esc(h.season)}</span><p class="small">${esc(h.text)}</p></div>`).join("");
+
+  // Duell
+  const fa = $("fa"), fb = $("fb");
+  const opts = FIGHTERS.map(f => `<option value="${f.id}">${esc(f.name)}</option>`).join("");
+  fa.innerHTML = opts; fb.innerHTML = opts;
+  fa.value = "sm_s7"; fb.value = "darkseid";
+  function power(a, b) {
+    let s = a.s.reduce((x, y) => x + y, 0); const notes = [];
+    if (a.kryptonite && b.k === true) { s += 8; notes.push(`${a.name} hat Kryptonit – gegen einen vollen Kryptonier entscheidet das fast alles.`); }
+    if (a.kryptonite && b.k === "half") { s += 4; notes.push(`Kryptonit hilft ${a.name}, aber die Zwillinge sind als Halb-Menschen weniger anfällig.`); }
+    if (a.kryptonite && b.k === "inverse") notes.push("Normales Kryptonit wirkt bei Bizarro nicht wie gewohnt.");
+    if (a.radion && b.god) { s += 9; notes.push(`${a.name} hat Radion – die einzige Substanz, die Neue Götter wirklich verletzt.`); }
+    if (a.god && !b.god && !b.radion) { s += 3; notes.push(`${a.name} ist ein Neuer Gott von Apokolips.`); }
+    if (a.id === "doomsday") { s += 3; notes.push("Doomsday kommt nach jeder Niederlage stärker zurück."); }
+    return { s, notes };
+  }
+  function duel() {
+    const a = FIGHTERS.find(f => f.id === fa.value), b = FIGHTERS.find(f => f.id === fb.value);
+    const face = f => `<figure><div class="square portrait">${img(f.img, f.name)}</div><h3>${esc(f.name)}</h3><span class="small muted">${esc(f.note)}</span>${credit(f.img, "span")}</figure>`;
+    const rows = STATS.map((n, i) => `<div class="stat-row">
+        <div class="half l"><span class="n">${a.s[i]}</span><div class="sbar"><i style="width:${a.s[i] * 10}%"></i></div></div>
+        <span class="lbl">${n}</span>
+        <div class="half r"><div class="sbar"><i style="width:${b.s[i] * 10}%"></i></div><span class="n">${b.s[i]}</span></div>
+      </div>`).join("");
+    let v;
+    if (a.id === b.id) {
+      v = `<span class="w">Spiegelkampf</span><p>Gleiche Werte, gleiche Tricks. Das endet wie Superman gegen Bizarro: unentschieden und sehr laut.</p>`;
+    } else {
+      const pa = power(a, b), pb = power(b, a), d = pa.s - pb.s, gap = Math.abs(d);
+      const w = d >= 0 ? a : b, l = d >= 0 ? b : a;
+      const best = STATS.map((n, i) => [n, w.s[i] - l.s[i]]).sort((x, y) => y[1] - x[1])[0];
+      const notes = [...pa.notes, ...pb.notes];
+      v = gap <= 3
+        ? `<span class="w">Kopf an Kopf</span><p>${esc(a.name)} kommt auf ${pa.s} Punkte, ${esc(b.name)} auf ${pb.s}. Hier entscheidet die Tagesform – oder wer zuerst Hilfe ruft.</p>`
+        : `<span class="w">${gap <= 9 ? "Knapper Sieg" : "Klarer Sieg"}: ${esc(w.name)}</span><p>${esc(w.name)} gewinnt mit ${Math.max(pa.s, pb.s)} zu ${Math.min(pa.s, pb.s)} Punkten. Der größte Vorteil liegt bei „${best[0]}“ (+${best[1]}).</p>`;
+      if (notes.length) v += `<ul class="dots small">${notes.map(n => `<li>${esc(n)}</li>`).join("")}</ul>`;
+    }
+    $("duel").innerHTML = `<div class="duel-faces">${face(a)}${face(b)}</div><div class="stats">${rows}</div><div class="verdict">${v}<span class="small muted">Fan-Einschätzung, kein Kanon.</span></div>`;
+  }
+  fa.addEventListener("change", duel); fb.addEventListener("change", duel); duel();
+
+  // Tracker
+  let season = 4;
+  const pick = $("seasonpick");
+  pick.innerHTML = [1, 2, 3, 4, 5, 6, 7].map(n => `<button class="seg" type="button" data-s="${n}" aria-pressed="${n === season}">Staffel ${n}</button>`).join("");
+  function renderTrack() {
+    $("track-label").innerHTML = `<div class="tags">${season <= 4 ? tag("kanon") : tag("fan")}<span class="small muted sans">Stand am Ende von Staffel ${season}${season === 4 ? " (mit Ein-Jahr-Sprung)" : ""}</span></div>` +
+      (season >= 5 ? `<p class="spoil-note" style="margin-top:.6rem"><b>Spoiler:</b> zeigt, wie Staffel ${season} für jede Figur endet.</p>` : "");
+    $("track").innerHTML = `<caption class="cr" style="caption-side:bottom;text-align:left">Porträts: © The CW / Warner Bros. TV · Arrowverse Wiki, einzeln verlinkt im Bereich „Wo wir stehen“</caption>
+      <thead><tr><th scope="col">Figur</th><th scope="col">Beziehung</th><th scope="col">Kräfte und Lage</th><th scope="col">Wohnort</th></tr></thead><tbody>` +
+      TRACK_CHARS.map(c => {
+        const t = c.t[season], prev = c.t[season - 1];
+        const changed = prev && prev.join() !== t.join();
+        return `<tr>
+          <th scope="row"><span class="who"><span class="thumb">${img(c.img, c.name)}</span>${esc(c.name)}</span>${changed ? '<span class="chg">geändert</span>' : ""}</th>
+          <td data-l="Beziehung">${esc(t[0])}</td><td data-l="Kräfte und Lage">${esc(t[1])}</td><td data-l="Wohnort">${esc(t[2])}</td>
+        </tr>`;
+      }).join("") + `</tbody>`;
+  }
+  pick.addEventListener("click", ev => {
+    const b = ev.target.closest("[data-s]"); if (!b) return;
+    season = +b.dataset.s;
+    pick.querySelectorAll(".seg").forEach(x => x.setAttribute("aria-pressed", x === b ? "true" : "false"));
+    renderTrack();
+  });
+  renderTrack();
+
+  // Zeitleiste
+  $("tl").innerHTML = TIMELINE.map(t => `
+    ${t.s === 5 ? '<li class="divider">Ab hier: unsere Fortsetzung</li>' : ""}
+    <li>
+      <div class="yr"><b>Staffel ${t.s}</b><span>${esc(t.year)}</span>${tag(t.label)}</div>
+      <div class="flow"><ul class="dots">${t.items.map(i => `<li>${esc(i)}</li>`).join("")}</ul>${t.s >= 5 ? `<p class="small"><a href="#s${t.s}">Zum Episodenguide</a></p>` : ""}</div>
+      ${fig(t.img, "Bild zu Staffel " + t.s, t.s <= 4 ? "portrait" : "cine")}
+    </li>`).join("");
+
+  // Quellen
+  $("sources").innerHTML = SOURCES.map(g => `
+    <div class="flow"><h2 class="rule-top">${esc(g.group)}</h2><ul>${g.items.map(([n, u]) => `<li>${u && u.startsWith("http") ? `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(n)}</a>` : esc(n)}</li>`).join("")}</ul></div>`).join("");
+
+  // Router
+  const views = [...document.querySelectorAll(".view")];
+  const links = [...document.querySelectorAll("#nav-list a")];
+  function route() {
+    let h = (location.hash || "#start").slice(1), target = null;
+    const ep = h.match(/^(s[567])e(\d+)$/);
+    if (ep) { target = h; h = ep[1]; }
+    if (!views.some(v => v.dataset.view === h)) h = "start";
+    views.forEach(v => { v.hidden = v.dataset.view !== h; });
+    links.forEach(a => {
+      if (a.getAttribute("href") === "#" + h) { a.setAttribute("aria-current", "page"); $("nav-cur").textContent = "· " + a.textContent; }
+      else a.removeAttribute("aria-current");
+    });
+    navbar.classList.remove("open"); toggle.setAttribute("aria-expanded", "false");
+    if (target) { const d = $(target); if (d) { d.open = true; requestAnimationFrame(() => setTimeout(() => d.scrollIntoView({ block: "start" }), 60)); return; } }
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener("hashchange", () => { route(); $("main").focus({ preventScroll: true }); });
+  route();
+})();
+</script>
